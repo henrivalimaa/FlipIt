@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="assets/scss/app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <meta name="google-signin-client_id" content="369113424971-djka7ikr57l3pbn3d63babsgd4tj5mud.apps.googleusercontent.com" />
+    <meta name="google-signin-cookiepolicy" content="single_host_origin" />
+    <meta name="google-signin-callback" content="signinCallback" />
+    <meta name="google-signin-scope" content="https://www.googleapis.com/auth/games" />
+    <link rel="icon" href="assets/images/coke-bottle.png">
+
+    <!-- External styles -->
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+    <!-- External libraries -->
+    <script src="https://apis.google.com/js/client.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.1/phaser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.1/p2.min.js"></script>
+  </head>
+  <body ng-app="sample">
+
+    <main-menu></main-menu>
+    <ui-view> 
+      <p>Loading ...</p>
+    </ui-view>
+
+    <!-- Angular libraries (v1.5.11) -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-ui-router/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Views -->
+    <script src="views/home/home.view.js"></script>
+    <script src="views/game/game.view.js"></script>
+    <script src="views/leaderboards/leaderboards.view.js"></script>
+
+    <!-- Components -->
+    <script src="components/game/game.component.js"></script>
+    <script src="components/main-menu/main-menu.component.js"></script>
+    <script src="components/profile-menu/profile-menu.component.js"></script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+/** General styles */
+
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: 'VT323', monospace !important;
+	background-color: #336590;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.centered-X {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/** Game view styles */
+
+#game-area, .app, .full-screen {
+	height: 100%;
+	width: 100%;	
+}
+
+#game-area canvas {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.game-statistics {
+	background-color: transparent;
+	color: #fff;
+	padding: 1em;
+    max-width: 20em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2em;
+    z-index: 1000;
+    font-size: 32px;
+    text-align: center;
+}
+
+/** Home view styles */
+
+.home {
+	padding-top: 3em;
+	background-color: #336590;
+}
+
+.home-title {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	color: #fff;
+	font-size: 60px;
+}
+
+.logo {
+	width: 8em;
+    height: 8em;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #fac136;
+}
+
+.logo > a {
+	position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.logo > a > img {
+	max-height: 6em;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+/** Main menu component styles */
+
+.home-menu {
+	position: absolute;
+	top: 18em;
+}
+
+.menu {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 20em;
+	text-align: center;
+}
+
+.menu-item {
+	margin-top: 0.5em;
+}
+
+.menu-item > a {
+	color: #fff !important;
+	font-size: 50px;
+	display: block;
+	width: 100%;
+}
+
+.menu-item p {
+	margin: 0.5em;
+	color: #fff;
+	font-size: 25px;
+}
+
+.menu-item p > a {
+	margin: 0em;
+	color: #fff;
+	font-size: 25px;
+}
+
+.menu-item button {
+	width: 100%;
+	padding: 0.5em;
+}
+
+.menu-item button > img {
+	max-width: 1.5em;
+}
+
+.menu-item > a:hover {
+	text-decoration: none;
+}
+
+.main-menu {
+	position: absolute;
+    z-index: 2000;
+    padding: 1em;
+    max-width: 15em;
+}
+
+.main-menu .menu-item a {
+	font-size: 25px;
+}
+
+.main-menu .menu-item p {
+	margin: 0;
+	font-size: 20px;
+}
+
+.main-menu-btn {
+	width: 20em;
+}
+
+.main-menu-btn button {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+}
+
+.main-menu-btn button:hover {
+	opacity: 0.7;
+}
+
+.main-menu-btn button:focus {
+	outline: none;
+}
+
+/** Profile menu component styles */
+
+.profile-menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 1em;
+	overflow: hidden;
+	z-index: 1000;
+	width: 20em;
+	text-align: right;
+}
+
+.profile-menu button {
+	padding: 0;
+	width: 3em;
+	height: 3em;
+	margin-bottom: 0.5em;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid #fff;
+}
+
+.profile-menu button:hover {
+	opacity: 0.6;
+}
+
+.profile-menu button:focus {
+	outline: none;
+}
+
+.profile-menu button > img {
+	height: 3em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player-status > p {
+	display: inline-block;
+	font-size: 20px;
+	color: #fff;
+	margin-right: 0.5em;
+}
+
+.player-info p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	color: #fff;
+	font-size: 20px;
+}
+
+.profile-menu-list ul {
+	text-align: right;
+}
+
+.profile-menu-list a {
+	color: #fff;
+	font-size: 20px;
+}
+
+.status {
+	position: absolute;
+	width: 10em;
+	left: 5em;
+	top: 1em;
+	z-index: 1000;
+	border-radius: 3px;
+	background-color: #ddd;;
+}
+
+/** Leaderboards view styles */
+
+.leaderboards {
+	max-width: 30em;
+	padding-top: 2.5em;
+}
+
+.leaderboards-title {
+	color: #fff;
+}
+
+.leaderboard-tabs {
+	padding: 0.3em;
+	background-color: #ddd;
+}
+
+.leaderboard-container {
+	min-height: 40em;
+	padding: 0.5em;
+	background-color: #dddd;
+}
+
+.leaderboard-container h3 {
+	text-align: center;
+}
+
+.leaderboard {
+	max-height: 40em;
+	overflow-y: scroll;
+}
+
+.leaderboard-item {
+	padding: 0.5em;
+}

@@ -1,0 +1,13 @@
+<div class="profile-menu">
+	<button ng-click="$ctrl.openMenu = !$ctrl.openMenu">
+		<img src="assets/images/player-placeholder.png">		
+	</button>
+	<div ng-if="$ctrl.openMenu" class="profile-menu-list">
+		<ul>
+			<li><a href="!#/achievements">My Achiecements</a></li>
+			<li><a href="!#/profile">Profile</a></li>
+			<li><a href="!#/settings">Settings</a></li>
+			<li><a href="#">Logout</a></li>
+		</ul>
+	</div>
+</div>
