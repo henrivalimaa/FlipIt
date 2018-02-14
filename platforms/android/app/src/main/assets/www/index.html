@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>Flip It</title>
 
     <link rel="manifest" href="manifest.json">
 
@@ -16,19 +16,15 @@
       }
     </script>-->
 
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
     <link href="assets/scss/app.css" rel="stylesheet">
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-    <meta name="google-signin-client_id" content="369113424971-djka7ikr57l3pbn3d63babsgd4tj5mud.apps.googleusercontent.com" />
-    <meta name="google-signin-cookiepolicy" content="single_host_origin" />
-    <meta name="google-signin-callback" content="signinCallback" />
-    <meta name="google-signin-scope" content="https://www.googleapis.com/auth/games" />
-    <link rel="icon" href="assets/images/coke-bottle.png">
+    <link rel="icon" href="assets/images/logo/logo.png">
 
     <!-- External styles -->
     <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
@@ -37,21 +33,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid:300" rel="stylesheet">
 
     <!-- External libraries -->
-    <script src="https://apis.google.com/js/client.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.1/phaser.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.1/p2.min.js"></script>
   </head>
-  <body ng-app="sample">
+  <body ng-app="flipIt">
 
     <main-menu></main-menu>
-    <ui-view> 
-      <p>Loading ...</p>
-    </ui-view>
+    <ui-view> </ui-view>
 
     <!-- Angular libraries (v1.5.11) -->
     <script src="lib/angular/angular.js"></script>
@@ -62,11 +55,15 @@
     <!-- Views -->
     <script src="views/home/home.view.js"></script>
     <script src="views/game/game.view.js"></script>
+    <script src="views/store/store.view.js"></script>
+    <script src="views/settings/settings.view.js"></script>
+    <script src="views/profile/profile.view.js"></script>
     <script src="views/leaderboards/leaderboards.view.js"></script>
 
     <!-- Components -->
     <script src="components/game/game.component.js"></script>
+    <script src="components/loader/loader.component.js"></script>
     <script src="components/main-menu/main-menu.component.js"></script>
-    <script src="components/profile-menu/profile-menu.component.js"></script>
+    <script src="components/profile/profile.component.js"></script>
   </body>
 </html>

@@ -1,55 +1,73 @@
 <div class="leaderboards centered-X">
 	<h2 class="text-center leaderboards-title">Leaderboards</h2>
-	<div class="leaderboard-tabs text-center">
-		<button class="leaderboard-tab" ng-click="$ctrl.showLeaderboard('ALL_TIME')">All time</button>
-		<button class="leaderboard-tab" ng-click="$ctrl.showLeaderboard('WEEKLY')">Weekly</button>
-		<button class="leaderboard-tab" ng-click="$ctrl.showLeaderboard('DAILY')">Daily</button>
+	<div class="leaderboard-tabs centered-X text-center">
+		<button class="leaderboard-tab mr-05" ng-class="{'active': $ctrl.timeSpan === 'ALL_TIME'}" ng-click="$ctrl.showLeaderboard('ALL_TIME')">All time</button>
+		<button class="leaderboard-tab mr-05" ng-class="{'active': $ctrl.timeSpan === 'WEEKLY'}" ng-click="$ctrl.showLeaderboard('WEEKLY')">Weekly</button>
+		<button class="leaderboard-tab" ng-class="{'active': $ctrl.timeSpan === 'DAILY'}" ng-click="$ctrl.showLeaderboard('DAILY')">Daily</button>
 		<!--<button class="leaderboard-tab">My scores</button>-->
 	</div>
 
 	<div class="leaderboard-container">
 		<div ng-if="$ctrl.timeSpan === 'ALL_TIME'">
-			<h3>All time leaderboard</h3>
-			<ul class="leaderboard" ng-if="$ctrl.leaderboards.allTime.items">
+			<h3 style="color: #fff;" class="text-center">All time leaders</h3>
+			<ul class="leaderboard centered-X" ng-if="$ctrl.leaderboards.allTime.items">
 				<li class="leaderboard-item" ng-repeat="item in $ctrl.leaderboards.allTime.items">
-					<span>{{$index + 1}}</span>
-					<img ng-src="{{item.player.avatarImageUrl}}">
-					<span>{{item.player.displayName}} </span>
-					<span>{{item.formattedScore}}</span>
+					<span class="leaderboard-item-index">{{$index + 1}}</span>
+					<div class="leaderboard-item-result">
+						<img ng-src="{{item.player.avatarImageUrl}}" ng-class="{'golden-border': $index === 0, 'silver-border': $index === 1, 'bronze-border': $index === 2,}">
+						<div class="leaderboard-item-text" ng-class="{'golden-bg': $index === 0, 'silver-bg': $index === 1, 'bronze-bg': $index === 2,}">
+							<span>{{item.player.displayName}} </span>
+							<span class="leaderboard-item-score" ng-class="{'top-score-text': $index === 0 || $index === 1 || $index === 2}">{{item.formattedScore}}</span>
+						</div>
+					</div>
 				</li>
 			</ul>
+			<!--
 			<div class="jumbotron" ng-if="!$ctrl.leaderboards.daily.items">
 				<h4 class="text-center">No results</h4>
 			</div>
+			-->
 		</div>
 		<div ng-if="$ctrl.timeSpan === 'WEEKLY'">
-			<h3>Weekly leaderboard</h3>
-			<ul class="leaderboard" ng-if="$ctrl.leaderboards.weekly.items">
-				<li class="leaderboard-item" ng-repeat="item in $ctrl.leaderboards.weekly.items">
-					<span>{{$index + 1}}</span>
-					<img ng-src="{{item.player.avatarImageUrl}}">
-					<span>{{item.player.displayName}} </span>
-					<span>{{item.formattedScore}}</span>
+			<h3 style="color: #fff;" class="text-center">Weekly leaders</h3>
+			<ul class="leaderboard centered-X" ng-if="$ctrl.leaderboards.allTime.items">
+				<li class="leaderboard-item" ng-repeat="item in $ctrl.leaderboards.allTime.items">
+					<span class="leaderboard-item-index">{{$index + 1}}</span>
+					<div class="leaderboard-item-result">
+						<img ng-src="{{item.player.avatarImageUrl}}" ng-class="{'golden-border': $index === 0, 'silver-border': $index === 1, 'bronze-border': $index === 2,}">
+						<div class="leaderboard-item-text" ng-class="{'golden-bg': $index === 0, 'silver-bg': $index === 1, 'bronze-bg': $index === 2,}">
+							<span>{{item.player.displayName}} </span>
+							<span class="leaderboard-item-score" ng-class="{'top-score-text': $index === 0 || $index === 1 || $index === 2}">{{item.formattedScore}}</span>
+						</div>
+					</div>
 				</li>
 			</ul>
+			<!--
 			<div class="jumbotron" ng-if="!$ctrl.leaderboards.daily.items">
 				<h4 class="text-center">No results</h4>
 			</div>
+			-->
 		</div>
 		<div ng-if="$ctrl.timeSpan === 'DAILY'">
-			<h3>Daily leaderboard</h3>
-			<ul class="leaderboard" ng-if="$ctrl.leaderboards.daily.items">
-				<li class="leaderboard-item" ng-repeat="item in $ctrl.leaderboards.daily.items">
-					<span>{{$index + 1}}</span>
-					<img ng-src="{{item.player.avatarImageUrl}}">
-					<span>{{item.player.displayName}} </span>
-					<span>{{item.formattedScore}}</span>
+			<h3 style="color: #fff;" class="text-center">Daily leaders</h3>
+			<ul class="leaderboard centered-X" ng-if="$ctrl.leaderboards.allTime.items">
+				<li class="leaderboard-item" ng-repeat="item in $ctrl.leaderboards.allTime.items">
+					<span class="leaderboard-item-index">{{$index + 1}}</span>
+					<div class="leaderboard-item-result">
+						<img ng-src="{{item.player.avatarImageUrl}}" ng-class="{'golden-border': $index === 0, 'silver-border': $index === 1, 'bronze-border': $index === 2,}">
+						<div class="leaderboard-item-text" ng-class="{'golden-bg': $index === 0, 'silver-bg': $index === 1, 'bronze-bg': $index === 2,}">
+							<span>{{item.player.displayName}} </span>
+							<span class="leaderboard-item-score" ng-class="{'top-score-text': $index === 0 || $index === 1 || $index === 2}">{{item.formattedScore}}</span>
+						</div>
+					</div>
 				</li>
 			</ul>
+			<!--
 			<div class="jumbotron" ng-if="!$ctrl.leaderboard.daily.items">
 				<h4 class="text-center">No results</h4>
 			</div>
+			-->
 		</div>
 	</div>
-	<!--<button style="position: relative; top: 30em; left :30em;" class="btn btn-success" ng-click="$ctrl.generateScore()">Generate score</button>-->
+	<!--<button class="btn btn-success centered-X" ng-click="$ctrl.generateScore()">Generate score</button>-->
 </div>

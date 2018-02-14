@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sample.views.leaderboards', [])
+angular.module('flipIt.views.leaderboards', [])
 .component('leaderboardsView', {
   templateUrl: 'views/leaderboards/leaderboards.view.html',
   controller: LeaderboardsViewController
@@ -8,10 +8,10 @@ angular.module('sample.views.leaderboards', [])
 
 LeaderboardsViewController.$inject = [
 	'$scope',
-	'$http'
+	'$state'
 ];
 
-function LeaderboardsViewController($scope, $http) {
+function LeaderboardsViewController($scope, $state) {
 	var ctrl = this;
 	ctrl.showLeaderboard = showLeaderboard;
 	ctrl.generateScore = generateScore;
@@ -40,12 +40,95 @@ function LeaderboardsViewController($scope, $http) {
 					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
 				}
 			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
+			{
+				formattedScore: 1000,
+				player: {
+					displayName: 'TBHerns',
+					avatarImageUrl: 'https://yt3.ggpht.com/-lGn7AH_RhDo/AAAAAAAAAAI/AAAAAAAAAAA/zBSU238s17Q/s900-c-k-no-mo-rj-c0xffffff/photo.jpg'
+				}
+			},
 		]};
 
 	ctrl.$onInit = function () {
-		ctrl.timeSpan = 'ALL_TIME';		
+		ctrl.timeSpan = 'ALL_TIME';
 		ctrl.leaderboards.allTime = ctrl.data;
-		console.log(ctrl.leaderboards.allTime.items)
+
+		/*
+		alert(window.plugins);
+		window.plugins.playGamesServices.showPlayer(function (playerData) {
+			alert(JSON.stringify(playerData, null, 4));
+			ctrl.player = playerData.displayName;
+		});
+		*/
+
+		/**
+		window.plugins.playGamesServices.isSignedIn(function (result) {
+			alert(response)
+			if (response.isSignedIn) {
+				window.plugins.playGamesServices.showPlayer(function (playerData) {
+					ctrl.dummy = playerData.displayName;
+				});
+			} else {
+				$state.reload();
+			}
+		});
+		*/
 
 		/*
 		var config = { 
@@ -89,27 +172,20 @@ function LeaderboardsViewController($scope, $http) {
 	 * @return {[type]} [description]
 	 */
 	function generateScore () {
-		var score = _getRandomArbitrary(90, 100);
+		var score = _getRandomArbitrary(900, 1000);
 
-		gapi.client.request({
-			path: '/games/v1/leaderboards/CgkIy8j_ht8KEAIQAw/scores',
-			params: {leaderboardId: 'CgkIy8j_ht8KEAIQAw', score: score},
-			method: 'post',
-			callback: function(response) {
-				console.log(response);
+		var data = {
+    		score: score,
+    		leaderboardId: 'CgkI356-g80bEAIQBA'
+		};
 
-				var config = { 
-					leaderboardId: 'CgkIy8j_ht8KEAIQAw', 
-					collection: 'PUBLIC',
-					timeSpan:'ALL_TIME'
-				};
-
-				var request = gapi.client.games.scores.list(config);
-				request.execute(function (response) { 
-					console.log(response);
-				});
-			}
-	    });
+		window.plugins.playGamesServices.submitScoreNow(data, function(response) {
+			// alert(JSON.stringify(response, null, 4));
+			var data = {
+				leaderboardId: 'CgkI356-g80bEAIQBA'
+			};
+			window.plugins.playGamesServices.showLeaderboard(data);
+		});
 
 		/**
 		 * [_getRandomArbitrary description]

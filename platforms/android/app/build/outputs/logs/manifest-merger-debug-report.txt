@@ -1,15 +1,33 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+MERGED from [com.google.android.gms:play-services-games:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-11.8.0.aar/5bbdea653dee01c522428d2c89f81022/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-plus:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-11.8.0.aar/9d034bb796056525ff100a1ca4b58480/AndroidManifest.xml:17:1-24:12
 MERGED from [:CordovaLib] /opt/projects/games/FlipIt/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-11.8.0.aar/6f9afbbd66a508eb296657b7aa365dc5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/db0d990951ca5eeb5a7cc1c0a9d37b2c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-license-11.8.0.aar/671768db613d07f5308fcfdd9cb63f4d/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-plus-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-license-11.8.0.aar/6efc9580f380366a41cfc5b7d74e4003/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/0cf77b742a4d117dbf8cf65ef4bdff0b/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-v4:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e2007a5d1515ee8ac8769cd9f9393b7e/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/84126e809fd44718fd0e8e5b0577d1f4/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-license-11.8.0.aar/e35d766974783ed60394ccb603977e14/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/37e10449e524a0f2536503d15bae6156/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-fragment:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/9848782135afb5218230614708ca5daa/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/52d4f57d905107dd78c759b31eb641ba/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/39520bfab8bd7b21559e8c14492d5270/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/116343ba14ae8c3f2b6e803b87a5485e/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/8d159f2bde1f2d582988c4f0503e808a/AndroidManifest.xml:17:1-27:12
+INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
+INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:1-16:12
 	package
-		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:98-126
 		INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml
 		INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -19,7 +37,7 @@ INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidM
 	android:hardwareAccelerated
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:125-183
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:127-185
 	android:versionCode
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:2:46-69
 		INJECTED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml
@@ -43,7 +61,43 @@ ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidMani
 	android:name
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:5:5-12:19
+ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:5:5-13:19
+MERGED from [com.google.android.gms:play-services-games:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-11.8.0.aar/5bbdea653dee01c522428d2c89f81022/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-11.8.0.aar/5bbdea653dee01c522428d2c89f81022/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-11.8.0.aar/9d034bb796056525ff100a1ca4b58480/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-11.8.0.aar/9d034bb796056525ff100a1ca4b58480/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-11.8.0.aar/6f9afbbd66a508eb296657b7aa365dc5/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-11.8.0.aar/6f9afbbd66a508eb296657b7aa365dc5/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/db0d990951ca5eeb5a7cc1c0a9d37b2c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/db0d990951ca5eeb5a7cc1c0a9d37b2c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-license-11.8.0.aar/671768db613d07f5308fcfdd9cb63f4d/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-license-11.8.0.aar/671768db613d07f5308fcfdd9cb63f4d/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-plus-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-license-11.8.0.aar/6efc9580f380366a41cfc5b7d74e4003/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-plus-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-license-11.8.0.aar/6efc9580f380366a41cfc5b7d74e4003/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/0cf77b742a4d117dbf8cf65ef4bdff0b/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/0cf77b742a4d117dbf8cf65ef4bdff0b/AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e2007a5d1515ee8ac8769cd9f9393b7e/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e2007a5d1515ee8ac8769cd9f9393b7e/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/84126e809fd44718fd0e8e5b0577d1f4/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/84126e809fd44718fd0e8e5b0577d1f4/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-license-11.8.0.aar/e35d766974783ed60394ccb603977e14/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-license-11.8.0.aar/e35d766974783ed60394ccb603977e14/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/37e10449e524a0f2536503d15bae6156/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/37e10449e524a0f2536503d15bae6156/AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/9848782135afb5218230614708ca5daa/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/9848782135afb5218230614708ca5daa/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/52d4f57d905107dd78c759b31eb641ba/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/52d4f57d905107dd78c759b31eb641ba/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/39520bfab8bd7b21559e8c14492d5270/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/39520bfab8bd7b21559e8c14492d5270/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/116343ba14ae8c3f2b6e803b87a5485e/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/116343ba14ae8c3f2b6e803b87a5485e/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/8d159f2bde1f2d582988c4f0503e808a/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/8d159f2bde1f2d582988c4f0503e808a/AndroidManifest.xml:25:5-20
 	android:supportsRtl
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
@@ -52,18 +106,20 @@ ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidMani
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
-activity#io.ionic.starter.MainActivity
+activity#com.unknown.flipit.MainActivity
 ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
+	android:screenOrientation
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:194-230
 	android:label
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
 	android:launchMode
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:135-165
 	android:windowSoftInputMode
-		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:257-299
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:294-336
 	android:configChanges
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:19-96
 	android:theme
-		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:194-256
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:231-293
 	android:name
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:6:166-193
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
@@ -78,11 +134,73 @@ category#android.intent.category.LAUNCHER
 ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
 	android:name
 		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
+meta-data#com.google.android.gms.games.APP_ID
+ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:12:9-104
+	android:value
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:12:71-101
+	android:name
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:12:20-70
 uses-sdk
-ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:13:5-74
+ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:14:5-74
+MERGED from [com.google.android.gms:play-services-games:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-11.8.0.aar/5bbdea653dee01c522428d2c89f81022/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-games:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-11.8.0.aar/5bbdea653dee01c522428d2c89f81022/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-plus:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-11.8.0.aar/9d034bb796056525ff100a1ca4b58480/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-plus:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-11.8.0.aar/9d034bb796056525ff100a1ca4b58480/AndroidManifest.xml:20:5-44
 MERGED from [:CordovaLib] /opt/projects/games/FlipIt/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] /opt/projects/games/FlipIt/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-11.8.0.aar/6f9afbbd66a508eb296657b7aa365dc5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-11.8.0.aar/6f9afbbd66a508eb296657b7aa365dc5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/db0d990951ca5eeb5a7cc1c0a9d37b2c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/db0d990951ca5eeb5a7cc1c0a9d37b2c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-license-11.8.0.aar/671768db613d07f5308fcfdd9cb63f4d/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-games-license-11.8.0.aar/671768db613d07f5308fcfdd9cb63f4d/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-plus-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-license-11.8.0.aar/6efc9580f380366a41cfc5b7d74e4003/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-plus-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-license-11.8.0.aar/6efc9580f380366a41cfc5b7d74e4003/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/0cf77b742a4d117dbf8cf65ef4bdff0b/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/0cf77b742a4d117dbf8cf65ef4bdff0b/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-v4:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e2007a5d1515ee8ac8769cd9f9393b7e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e2007a5d1515ee8ac8769cd9f9393b7e/AndroidManifest.xml:21:5-23:54
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/84126e809fd44718fd0e8e5b0577d1f4/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/84126e809fd44718fd0e8e5b0577d1f4/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-license-11.8.0.aar/e35d766974783ed60394ccb603977e14/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-drive-license-11.8.0.aar/e35d766974783ed60394ccb603977e14/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/37e10449e524a0f2536503d15bae6156/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/37e10449e524a0f2536503d15bae6156/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-fragment:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/9848782135afb5218230614708ca5daa/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/9848782135afb5218230614708ca5daa/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/52d4f57d905107dd78c759b31eb641ba/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/52d4f57d905107dd78c759b31eb641ba/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/39520bfab8bd7b21559e8c14492d5270/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/39520bfab8bd7b21559e8c14492d5270/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/116343ba14ae8c3f2b6e803b87a5485e/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/116343ba14ae8c3f2b6e803b87a5485e/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/8d159f2bde1f2d582988c4f0503e808a/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/8d159f2bde1f2d582988c4f0503e808a/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e2007a5d1515ee8ac8769cd9f9393b7e/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:13:42-71
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:14:42-71
 	android:minSdkVersion
-		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:13:15-41
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:14:15-41
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from /opt/projects/games/FlipIt/platforms/android/app/src/main/AndroidManifest.xml:15:22-76
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.8.0] /home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/ccbd08f4653247e5a2d25c580f0ea4a6/AndroidManifest.xml:24:13-58

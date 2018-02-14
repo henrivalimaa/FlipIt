@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sample.components.game', [])
+angular.module('flipIt.components.game', ['flipIt.components.loader'])
 .component('game', {
   templateUrl: 'components/game/game.template.html',
   controller: GameController
@@ -10,45 +10,79 @@ GameController.$inject = [
 	'$scope'
 ]
 
+/**
+ * [GameController description]
+ * @param {[type]} $scope [description]
+ */
 function GameController($scope) {
 	var ctrl = this;
 	var clientWidth = window.innerWidth;
 	var clientHeight = window.innerHeight;
 
 	ctrl.bottle;
-
 	ctrl.game = new Phaser.Game(clientWidth = window.innerWidth, clientHeight = window.innerHeight, Phaser.CANVAS, 'game-area', { preload: preload, create: create, update: update, render: render });
 
 	ctrl.restartGame = restartGame;
+	ctrl.showLeaderboard = showLeaderboard;
 
+	/**
+	 * [preload description]
+	 * @return {[type]} [description]
+	 */
 	function preload() {
-		ctrl.game.load.image('bottle', 'assets/images/default-bottle.png');
-		ctrl.game.load.image('floor', 'assets/images/rectangle.png');
-		ctrl.game.load.image('grid', 'assets/images/grid.png');
+		ctrl.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
+		ctrl.game.load.image('floor', 'assets/images/game/objects/rectangle.png');
+		ctrl.game.load.image('grid', 'assets/images/game/backgrounds/grid.png');
 	}
 
+	/**
+	 * [create description]
+	 * @return {[type]} [description]
+	 */
 	function create() {
 		initGame();
 	}
 
-	function launch() {}
+	function launch() {} // NOT NEEDED
+	
+	/**
+	 * [update description]
+	 * @return {[type]} [description]
+	 */
 	function update() {
-		if (Math.floor(ctrl.bottle.body.velocity.y) === 0 && !ctrl.calculatingResult) {
-			ctrl.calculatingResult = true;
-			if ((-5 < ctrl.bottle.angle < 5) && ctrl.gameStarted) {
-				ctrl.count = ctrl.count + 1;
-				$scope.$apply();
+		if(ctrl.gameStarted) {
+			if (Math.floor(ctrl.bottle.body.velocity.y) === 0 && !ctrl.calculatingResult) {
+				ctrl.calculatingResult = true;
+				if (-5 < ctrl.bottle.angle < 5) {
+					ctrl.score = ctrl.score + 1;
+					$scope.$apply();
+				}
 			}
 		}
 	}
-	function render() {}
+
+	/**
+	 * [render description]
+	 * @return {[type]} [description]
+	 */
+	function render() {
+		var zone = ctrl.game.camera.deadzone;
+	    ctrl.game.context.fillStyle = 'rgba(255,0,0,0.6)';
+	    ctrl.game.context.fillRect(zone.x, zone.y, zone.width, zone.height);
+		ctrl.game.debug.pointer(ctrl.game.input.pointer1);
+		// ctrl.game.debug.cameraInfo(ctrl.game.camera, 32, 32);
+	}
 
 	function initGame() {
-		_initialize()
-		ctrl.count = 0;
+		ctrl.score = 0;
+		ctrl.timeleft = 10; // REMOVE THIS WHENEVER POSSIBLE
+		ctrl.timerOn = false; // REMOVE THIS WHENEVER POSSIBLE
 		ctrl.gameStarted = false;
+		ctrl.showResult = false; // REMOVE THIS WHENEVER POSSIBLE
 		ctrl.calculatingResult = false;
 		ctrl.bottleStationary = true;
+
+		if (ctrl.bottle !== undefined) ctrl.bottle.destroy();
 
 		ctrl.floorCollisionGroup;
 		ctrl.bottleCollisionGroup;
@@ -61,33 +95,81 @@ function GameController($scope) {
 	    ctrl.game.physics.p2.restitution = 0.2;
 	    ctrl.game.physics.p2.setImpactEvents(true);
 
-		//ctrl.game.input.onDown.add(_flipBottle, this);
-		//ctrl.game.input.onDown.add(_touchStart, this);
-
-		ctrl.game.input.onUp.add(_touchEnd, this);
-
-		ctrl.game.world.setBounds(0, 0, clientWidth * 2, clientHeight * 2);
-
+		// THIS NEEDS TO BE FIXED
+		setTimeout(function(){ ctrl.game.input.onUp.add(_touchEnd, this); }, 1000);
 		
-
-
-
+		ctrl.game.world.setBounds(0, 0, clientWidth * 2, clientHeight * 2);
 		_createCollisionGroups();
+			
 		_addFloor();
 		_addBottle();
 
 		ctrl.game.camera.follow(ctrl.bottle);
 		ctrl.game.camera.deadzone = new Phaser.Rectangle(100, clientHeight / 3, clientWidth - 200, clientHeight / 2 - 100);
 
-		/**
-		 * [_initialize description]
-		 * @return {[type]} [description]
-		 */
-		function _initialize() {
-			ctrl.count = 0;
-			ctrl.gameStarted = false;
-			if (ctrl.bottle !== undefined) ctrl.bottle.destroy();
-		}
+		$scope.$apply(); // REMOVE WHENEVER POSSIBLE
+
+		// REMOVE THIS WHENEVER POSSIBLE!
+		// THIS IS USED FOR TESTING PURPOSES ONLY!
+		$scope.$watch(function () {
+    		return ctrl.gameStarted;
+		}, function(gameStarted){
+			if(gameStarted && !ctrl.timerOn) {
+				ctrl.timerOn = true;
+			    var downloadTimer = setInterval(function(){
+			    	ctrl.timeleft--;
+			    	$scope.$apply(); // THIS NEEDS TO BE FIXED
+
+				    if(ctrl.timeleft <= 0) {
+				    	ctrl.showResult = true;
+				    	ctrl.loadingResult = true;
+				    	//ctrl.leaderboardResult = {}; // TESTING
+				    	//ctrl.leaderboardResult.formattedScore = 13; // TESTING
+				    	//ctrl.leaderboardResult.newBest = false; // TESTING
+				    	ctrl.game.input.onUp.removeAll(); // DISABLES BOTTLE'S ACTIONS
+				    	$scope.$apply(); // REMOVE WHENEVER POSSIBLE
+				    	
+				    	/*
+				    	setTimeout(function() {
+				    		// ctrl.loadingResult = false;
+				    		$scope.$apply();
+				    	}, 2000);
+				    	*/
+						
+						if (ctrl.score > 7) {
+							var achievement = {
+								achievementId: 'CgkI356-g80bEAIQAg'
+							};
+
+							window.plugins.playGamesServices.unlockAchievement(achievement);
+						}
+
+						if (ctrl.score > 0) {
+
+							var result = {
+					    		score: ctrl.score,
+					    		leaderboardId: 'CgkI356-g80bEAIQBA'
+							};
+
+							window.plugins.playGamesServices.submitScoreNow(result, function(response) {
+								ctrl.leaderboardResult = response;
+								ctrl.loadingResult = false;
+								// alert(JSON.stringify(response, null, 4));
+
+								setTimeout(function(response) {
+									$scope.$apply();
+								}, 10); 
+							});
+						} else {
+							ctrl.loadingResult = false;
+							$scope.$apply();
+						}
+				    	
+				    	clearInterval(downloadTimer);
+				    }
+			    }, 1000);
+			}
+		});
 
 		/**
 		 * [_flipBottle description]
@@ -102,17 +184,11 @@ function GameController($scope) {
 			angle = angle + 90;
 			ctrl.gameStarted = true;
 			if (distance > 50 && touch.positionDown.y > touch.position.y && ctrl.bottleStationary) {
-				/*if(angle > 0) {
-					ctrl.bottle.body.angularVelocity = 5;
-				} else {
-					ctrl.bottle.body.angularVelocity = -5;
-				}*/
 				ctrl.bottle.body.angularVelocity = 6.5;
 				ctrl.bottle.body.velocity.x = (angle) * 10;
 				ctrl.bottle.body.velocity.y = -clientHeight * (distance / clientHeight * 2.2);
 				ctrl.bottleStationary = false;
 				ctrl.calculatingResult = false;
-				console.log(ctrl.bottle.body.velocity.y);
 			}
 			$scope.$apply();
 		}
@@ -147,7 +223,6 @@ function GameController($scope) {
 		 * [_addBottle description]
 		 */
 		function _addBottle() {
-			//ctrl.bottle = ctrl.game.add.sprite(clientWidth / 2, clientHeight - 80, 'bottle');
 			ctrl.bottle = ctrl.game.add.sprite(ctrl.game.world.centerX, ctrl.game.world.centerY + ctrl.game.world.height / 2 - 80, 'bottle');
 			ctrl.bottle.anchor.setTo(0.5);
 			ctrl.bottle.scale.setTo(0.2);
@@ -156,7 +231,6 @@ function GameController($scope) {
 			ctrl.bottle.body.collideWorldBounds = true;
 			ctrl.bottle.body.fixedRotation = false;
 
-			// Collision enableb with floor
 			ctrl.bottle.body.collides(ctrl.floorCollisionGroup, _bottleLanding, this);
 
 			/**
@@ -165,48 +239,22 @@ function GameController($scope) {
 			 */
 			function _bottleLanding() {
 				ctrl.bottleStationary = true;
-
-				/*
-				var timer = ctrl.game.time.create(ctrl.game, true);
-				console.log(timer);
-				timer.onComplete.add(function(){
-					console.log('Timer runs');
-					
-				}, this);
-				timer.start();
-				console.log(timer);
-				*/
-
-				/***
-				_calculateScore();		
-				
-				$scope.$apply();
-
-				function _calculateScore() {
-					console.log(ctrl.calculatingResult)
-					if (ctrl.calculatingResult || !ctrl.gameStarted) return;
-					else {
-						ctrl.calculatingResult = true;
-						setTimeout(function () {
-							console.log('haloo')
-							if ((-5 < ctrl.bottle.angle < 5) && ctrl.gameStarted) {
-								ctrl.count = ctrl.count + 1;
-								$scope.$apply();
-							}
-							console.log(ctrl.bottle.angle);
-							ctrl.calculatingResult = false;
-						}, 3000)
-					}
-				}
-				*/
 			}
 		}
 
+		/**
+		 * [_touchStart description]
+		 * @return {[type]} [description]
+		 */
 		function _touchStart() {
 			ctrl.touchStartPoint = ctrl.game.input.pointer1.positionDown;
 			//console.log(ctrl.touchStartPoint);
 		}
 
+		/**
+		 * [_touchEnd description]
+		 * @return {[type]} [description]
+		 */
 		function _touchEnd() {
 			var lastTouch = ctrl.game.input.pointer1;
 			_flipBottle(lastTouch);
@@ -221,12 +269,12 @@ function GameController($scope) {
 		initGame();
 	}
 
-	function render() {
-		var zone = ctrl.game.camera.deadzone;
-	    ctrl.game.context.fillStyle = 'rgba(255,0,0,0.6)';
-	    ctrl.game.context.fillRect(zone.x, zone.y, zone.width, zone.height);
-
-		ctrl.game.debug.pointer(ctrl.game.input.pointer1);
-		ctrl.game.debug.cameraInfo(ctrl.game.camera, 32, 32);
+	/**
+	 * [showLeaderboard description]
+	 * @return {[type]} [description]
+	 */
+	function showLeaderboard() {
+		var data = { leaderboardId: 'CgkI356-g80bEAIQBA' };
+		window.plugins.playGamesServices.showLeaderboard(data);
 	}
 }

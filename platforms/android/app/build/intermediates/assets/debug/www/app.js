@@ -1,15 +1,19 @@
 'use strict';
 
- var app = angular.module('sample', [
+ var app = angular.module('flipIt', [
   'ionic',
   'ngRoute',
   'ui.router',
-  'sample.views.game',
-  'sample.views.home',
-  'sample.views.leaderboards',
-  'sample.components.game',
-  'sample.components.mainMenu',
-  'sample.components.profileMenu'
+  'flipIt.views.game',
+  'flipIt.views.home',
+  'flipIt.views.store',
+  'flipIt.views.settings',
+  'flipIt.views.profile',
+  'flipIt.views.leaderboards',
+  'flipIt.components.game',
+  'flipIt.components.loader',
+  'flipIt.components.mainMenu',
+  'flipIt.components.profile'
 ])
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -28,6 +32,21 @@ app.config(function($stateProvider, $urlRouterProvider) {
       component: 'gameView'
     })
 
+    $stateProvider.state('settings', {
+      url: '/settings',
+      component: 'settingsView'
+    })
+
+    $stateProvider.state('profile', {
+      url: '/profile',
+      component: 'profileView'
+    })
+
+    $stateProvider.state('store', {
+      url: '/store',
+      component: 'storeView'
+    })
+
     $stateProvider.state('leaderboards', {
       resolve: {
         user: getCurrentUser
@@ -41,21 +60,24 @@ app.config(function($stateProvider, $urlRouterProvider) {
      * @return {[type]} [description]
      */
     function getCurrentUser () {
-      gapi.client.load('plus','v1', function () {
-        var request = gapi.client.plus.people.get({
-          userId: 'me'
-        });
-
-        request.execute(function(response) {
-            if (response.code === 403) return;
-            else return response;
-        });
+      /*
+      window.plugins.playGamesServices.showPlayer(function (player) {
+        return player;
       });
+      */
+     return;
     }
 });
 
-app.run(function($ionicPlatform) {
+app.run(function($ionicPlatform, $rootScope, $state) {
   $ionicPlatform.ready(function() {
+
+    // Google auth
+    window.plugins.playGamesServices.auth(function (response) {
+      $rootScope.userIsAuthenticated = true;
+      $state.reload();
+    });
+
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -71,35 +93,3 @@ app.run(function($ionicPlatform) {
     }
   });
 })
-
-/**
- * [signinCallback description]
- * @param  {[type]} auth [description]
- * @return {[type]}      [description]
- */
-var signinCallback = function(auth) {
-  if (auth && auth.error == null) {
-  console.log(auth);
-    _loadClient();
-  } else {
-    if (auth && auth.hasOwnProperty('error')) {
-      console.log('Login failed because: ', auth.error);
-    }
-  }
-
-  function _loadClient() {
-    gapi.client.load('games','v1',function (response) {
-      console.log(response);
-    });
-
-    gapi.client.load('plus','v1', function () {
-      var request = gapi.client.plus.people.get({
-        userId: 'me'
-      });
-
-      request.execute(function(response) {
-        console.log(response);
-      });
-    });
-  }
-}

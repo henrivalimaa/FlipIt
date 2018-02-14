@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sample.views.game', ['sample.components.game'])
+angular.module('flipIt.views.game', ['flipIt.components.game'])
 .component('gameView', {
   bindings: {
   	user: '<'

@@ -19,6 +19,10 @@
             {
               "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"PlayGamesServices\"><param name=\"android-package\" value=\"com.berriart.cordova.plugins.PlayGamesServices\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -28,6 +32,36 @@
           "/*": [
             {
               "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" onload=\"true\" value=\"io.ionic.keyboard.IonicKeyboard\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "res/values/strings.xml": {
+        "parents": {
+          "/resources": [
+            {
+              "xml": "<string name=\"app_id\">948389777247</string>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<meta-data android:name=\"com.google.android.gms.games.APP_ID\" android:value=\"@string/app_id\" />",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
               "count": 1
             }
           ]
@@ -50,6 +84,13 @@
     },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.unknown.flipit"
+    },
+    "cordova-plugin-play-games-services": {
+      "APP_ID": "948389777247",
+      "PACKAGE_NAME": "com.unknown.flipit"
     }
   },
   "dependent_plugins": {},
@@ -77,6 +118,14 @@
       "clobbers": [
         "window.Keyboard"
       ]
+    },
+    {
+      "id": "cordova-plugin-play-games-services.PlayGamesServices",
+      "file": "plugins/cordova-plugin-play-games-services/www/play-games-services.js",
+      "pluginId": "cordova-plugin-play-games-services",
+      "clobbers": [
+        "window.plugins.playGamesServices"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -84,6 +133,8 @@
     "cordova-plugin-device": "2.0.1",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-ionic-webview": "1.1.16",
-    "cordova-plugin-ionic-keyboard": "2.0.5"
+    "cordova-plugin-ionic-keyboard": "2.0.5",
+    "cordova-plugin-console": "1.1.0",
+    "cordova-plugin-play-games-services": "1.1.0"
   }
 }

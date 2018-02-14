@@ -21,6 +21,13 @@
     },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.unknown.flipit"
+    },
+    "cordova-plugin-play-games-services": {
+      "APP_ID": "948389777247",
+      "PACKAGE_NAME": "com.unknown.flipit"
     }
   },
   "dependent_plugins": {}

@@ -23,6 +23,14 @@ module.exports = [
     "clobbers": [
       "window.Keyboard"
     ]
+  },
+  {
+    "id": "cordova-plugin-play-games-services.PlayGamesServices",
+    "file": "plugins/cordova-plugin-play-games-services/www/play-games-services.js",
+    "pluginId": "cordova-plugin-play-games-services",
+    "clobbers": [
+      "window.plugins.playGamesServices"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -32,7 +40,9 @@ module.exports.metadata =
   "cordova-plugin-device": "2.0.1",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-ionic-webview": "1.1.16",
-  "cordova-plugin-ionic-keyboard": "2.0.5"
+  "cordova-plugin-ionic-keyboard": "2.0.5",
+  "cordova-plugin-console": "1.1.0",
+  "cordova-plugin-play-games-services": "1.1.0"
 };
 // BOTTOM OF METADATA
 });

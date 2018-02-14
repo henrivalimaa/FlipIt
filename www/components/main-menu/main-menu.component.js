@@ -1,26 +1,24 @@
 'use strict';
 
-angular.module('sample.components.mainMenu', ['sample.components.profileMenu'])
+angular.module('flipIt.components.mainMenu', ['flipIt.components.profile'])
 .component('mainMenu', {
-  bindings: {
-  	gameMenu: '<'
-  },
   templateUrl: 'components/main-menu/main-menu.template.html',
   controller: MainMenuController
 });
 
 MainMenuController.$inject = [
-	'$http',
 	'$scope',
 	'$state',
 	'$rootScope'
 ];
 
-function MainMenuController($http, $scope, $state, $rootScope) {
+function MainMenuController($scope, $state, $rootScope) {
 	var ctrl = this;
-	ctrl.signInWithGoogle = signInWithGoogle;
-	ctrl.signOut = signOut;
 	ctrl.menuOpen = false;
+
+	ctrl.signOut = signOut;
+	ctrl.signInWithGoogle = signInWithGoogle;
+	ctrl.showLeaderboard = showLeaderboard;
 
 	ctrl.$onInit = function () {}
 
@@ -36,64 +34,46 @@ function MainMenuController($http, $scope, $state, $rootScope) {
 	})
 
 	/**
+	 * [description]
+	 */
+	$scope.$watch(function () {
+    	return $rootScope.userIsAuthenticated;
+	}, function(auth){
+		if (auth === true) {
+			window.plugins.playGamesServices.showPlayer(function (player) {
+				// alert(JSON.stringify(player, null, 4));
+				ctrl.player = player;
+				ctrl.userAuthenticated = true;
+				$scope.$apply();
+			});
+		}
+	})
+
+	/**
 	 * [signInWithGoogle description]
 	 * @return {[type]} [description]
 	 */
 	function signInWithGoogle() {
-		var config = { 
-			client_id: '369113424971-djka7ikr57l3pbn3d63babsgd4tj5mud.apps.googleusercontent.com', 
-			immediate: true, 
-			scope: 'https://www.googleapis.com/auth/games',
-			// prompt: 'consent'
-		}
+		// window.plugins.playGamesServices.auth();
+		window.plugins.playGamesServices.showPlayer(function (player) {
+			// alert(JSON.stringify(player, null, 4));
+			ctrl.player = player;
+			ctrl.userAuthenticated = true;
+			$scope.$apply();
+		});
 
-		gapi.auth.authorize(config, _signinCallback);
-
-		/**
-		 * [_signinCallback description]
-		 * @param  {[type]} auth [description]
-		 * @return {[type]}      [description]
-		 */
-		function _signinCallback (auth) {
-		  if (auth && auth.error == null) {
-			console.log(auth);
-		    _loadClient();
-		  } else {
-		    if (auth && auth.hasOwnProperty('error')) {
-		      console.log('Login failed because: ', auth.error);
-		    }
-		  }
-
-		  /**
-		   * [_loadClient description]
-		   * @return {[type]} [description]
-		   */
-		  function _loadClient() {
-		    gapi.client.load('games','v1',function (response) {
-		      	var request = gapi.client.games.players.get({playerId: 'me'})
-				request.execute(function(response) {
-					ctrl.displayName = response.displayName;
-					$scope.$apply();
-				});
-		    });
-
-		  	gapi.client.load('plus','v1', function () {
-		  		var request = gapi.client.plus.people.get({
-		  			userId: 'me'
-		  		});
-
-		  		request.execute(function(response) {
-		        	ctrl.userAuthenticated = true;
-		        	ctrl.user = response;
-		        	$state.reload();
-		        	$scope.$apply();
-		  		});
-		  	});
-		  	
-		  }
-		}
 	}
 
+	/**
+	 * [signOut description]
+	 * @return {[type]} [description]
+	 */
 	function signOut() {
+		window.plugins.playGamesServices.signOut();
+	}
+
+	function showLeaderboard() {
+		var data = { leaderboardId: 'CgkI356-g80bEAIQBA' };
+		window.plugins.playGamesServices.showLeaderboard(data);
 	}
 }

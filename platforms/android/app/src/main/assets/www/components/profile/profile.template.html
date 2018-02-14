@@ -1,0 +1,25 @@
+<div class="profile-menu">
+	<div class="player-status">
+		<p>{{ $ctrl.user.displayName }}</p>
+		<button ng-click="$ctrl.openProfile = true">
+			<img ng-src="{{$ctrl.user.iconImageUrl}}">		
+		</button>
+	</div>
+</div>
+<div ng-if="$ctrl.openProfile" class="profile">
+	<div class="profile-back-btn">
+		<i class="fa fa-2x fa-angle-left" ng-click="$ctrl.openProfile = false"></i>
+	</div>
+	<h2 class="text-center profile-title">My Profile</h2>
+	<div class="profile-status">
+		<img ng-src="{{$ctrl.user.iconImageUrl}}">
+		<h4>{{ $ctrl.user.displayName }}</h4>
+		<p>{{ $ctrl.user.title }}</p>
+		<button class="profile-achievement-btn centered-X" ng-click="$ctrl.showAchievements();">Show achievements</button>
+	</div>
+	<!--
+	<div class="profile-statistics">
+		<small>Coming soon...</small>
+	</div>
+	-->
+</div>

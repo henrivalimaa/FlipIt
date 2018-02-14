@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-play-games-services",
+        "scope": null,
+        "escapedName": "cordova-plugin-play-games-services",
+        "name": "cordova-plugin-play-games-services",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/opt/projects/games/FlipIt"
+    ]
+  ],
+  "_from": "cordova-plugin-play-games-services@latest",
+  "_id": "cordova-plugin-play-games-services@1.1.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-play-games-services",
+  "_nodeVersion": "8.6.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-play-games-services-1.1.0.tgz_1506984672863_0.9659214711282402"
+  },
+  "_npmUser": {
+    "name": "artberri",
+    "email": "alberto@berriart.com"
+  },
+  "_npmVersion": "5.4.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-play-games-services",
+    "scope": null,
+    "escapedName": "cordova-plugin-play-games-services",
+    "name": "cordova-plugin-play-games-services",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-play-games-services/-/cordova-plugin-play-games-services-1.1.0.tgz",
+  "_shasum": "1cc2e65db0ade5c864ef3ae27532bf689d1e0af1",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-play-games-services",
+  "_where": "/opt/projects/games/FlipIt",
+  "author": {
+    "name": "Alberto Varela",
+    "email": "alberto@berriart.com"
+  },
+  "bugs": {
+    "url": "https://github.com/artberri/cordova-plugin-play-games-services/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-play-games-services",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Google Play Games Services Cordova Plugin for Android",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-GXgXvzJv8Xx+6CKVhLrhuwfivDNsIrf/rMkIhKay1L78AcL6UmzunXHWvqwQ6O2F1L+2UHfBaUNVoz7KmFyH4w==",
+    "shasum": "1cc2e65db0ade5c864ef3ae27532bf689d1e0af1",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-play-games-services/-/cordova-plugin-play-games-services-1.1.0.tgz"
+  },
+  "gitHead": "c0f97cb62d8c1028578796aeb820f5b2481b822a",
+  "homepage": "https://github.com/artberri/cordova-plugin-play-games-services#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova",
+    "google",
+    "play",
+    "games",
+    "services",
+    "android",
+    "users",
+    "leaderboard",
+    "achievements"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "artberri",
+      "email": "alberto@berriart.com"
+    }
+  ],
+  "name": "cordova-plugin-play-games-services",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artberri/cordova-plugin-play-games-services.git"
+  },
+  "version": "1.1.0"
+}
