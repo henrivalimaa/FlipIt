@@ -1,0 +1,83 @@
+@charset 'UTF-8';
+
+// Include app views
+@import 
+    'views/home',
+    'views/game',
+    'views/store',
+    'views/settings',
+    'views/leaderboards';
+
+// Include app components
+@import 
+    'components/game',
+    'components/loader',
+    'components/profile',
+    'components/main-menu';
+
+// Include app base
+@import 
+    'base/typography';
+
+// Include app helpers
+@import 
+    'helpers/functions',
+    'helpers/helpers',
+    'helpers/mixins',
+    'helpers/variables';
+
+// Include app themes
+@import 
+    'themes/default-theme';
+
+// Include app layout
+@import 
+    'layout/footer',
+    'layout/grid',
+    'layout/header';
+
+// Include app vendors
+
+// Default colors (Example):
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+// General styles
+body, html {
+	height: 100%;
+	width: 100%;
+	font-family: 'Londrina Solid', cursive !important;
+	background-image: -ms-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+	background-image: -moz-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+	background-image: -o-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3F85CB), color-stop(100, #8570DB));
+	background-image: -webkit-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+	background-image: linear-gradient(to bottom, #3F85CB 0%, #8570DB 100%);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+// These should be moved (Konsta)
+.centered-X {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.mr-05 {
+	margin-right: 0.5em;
+}

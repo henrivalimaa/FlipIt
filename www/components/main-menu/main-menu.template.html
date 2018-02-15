@@ -30,19 +30,21 @@
 			<li class="menu-item">
 				<div>
 					<p>Sign In with:</p>
-					<Button class="btn-lg btn-default menu-google-plus-btn" ng-click="$ctrl.signInWithGoogle()" ng-if="!$ctrl.userAuthenticated">
+					<Button class="btn-lg btn-default menu-google-plus-btn" ng-click="$ctrl.signInWithGoogle()">
 						<i class="fa fa-google-plus"></i>
 					</Button>
-					<Button class="btn-lg btn-default menu-facebook-btn" ng-click="$ctrl.signInWithGoogle()" ng-if="!$ctrl.userAuthenticated">
+					<Button class="btn-lg btn-default menu-facebook-btn" ng-click="$ctrl.signInWithGoogle()">
 						<i class="fa fa-facebook-square"></i>
 					</Button>
 				</div>
+				<!--
 				<div ng-if="$ctrl.userAuthenticated">
 					<p>You are signed in as:</p>
 					<p ng-if="$ctrl.userAuthenticated">
 						<a ui-sref="profile">{{ $ctrl.player.displayName }}</a>
 					</p>
 				</div>
+				-->
 			</li>
 		</ul>
 	</div>

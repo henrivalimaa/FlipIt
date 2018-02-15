@@ -1,0 +1,62 @@
+.loading-container {
+	position: relative;
+    height: 4em;
+}
+
+.loading-container small {
+	top: 30%;
+    position: relative;
+}
+
+.loader {
+  	font-size: 20px;
+    position: relative;
+    height: 1em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4em;
+    margin-top: 0.5em;
+    top: 50%;
+}
+
+.dot {
+  	width: 0.5em;
+  	height: 0.5em;
+  	border-radius: 0.5em;
+  	background: #fff;
+  	position: absolute;
+  	animation-duration: 0.5s;
+  	animation-timing-function: ease;
+  	animation-iteration-count: infinite;
+}
+
+.dot1, .dot2 {
+  	left: 0;
+}
+
+.dot3 { left: 1.5em; }
+
+.dot4 { left: 3em; }
+
+@keyframes reveal {
+  	from { transform: scale(0.001); }
+  	to { transform: scale(1); }
+}
+
+@keyframes slide {
+  	to { transform: translateX(1.5em) }
+}
+
+
+.dot1 {
+  	animation-name: reveal;
+}
+
+.dot2, .dot3 {
+  	animation-name: slide;
+}
+
+.dot4 {
+  	animation-name: reveal;
+  	animation-direction: reverse; /* thx @HugoGiraudel */
+}

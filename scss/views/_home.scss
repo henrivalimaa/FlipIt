@@ -1,0 +1,36 @@
+.home {
+	padding-top: 3em;
+	/*background-color: #336590;*/
+}
+
+.home-title {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	color: #fff;
+	font-size: 60px;
+}
+
+.home-title-text {
+    color: #fff;
+    font-size: 80px;
+    text-shadow: 0 6px 0 #ababab, 0 10px 20px #313131;
+}
+
+.logo {
+    height: 8em;
+}
+
+.logo > a {
+	position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.logo > a > img {
+	max-width: 20em;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}

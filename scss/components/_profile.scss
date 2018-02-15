@@ -1,0 +1,117 @@
+.profile {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2000;
+    color: #fff;
+    padding: 1em;
+    background-image: -ms-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+    background-image: -moz-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+    background-image: -o-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3F85CB), color-stop(100, #8570DB));
+    background-image: -webkit-linear-gradient(top, #3F85CB 0%, #8570DB 100%);
+    background-image: linear-gradient(to bottom, #3F85CB 0%, #8570DB 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: all ease 0.5s;
+}
+
+.profile.ng-enter,
+.profile.ng-leave {
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.profile.ng-enter,
+.profile.ng-leave.ng-leave-active {
+    left: -100%;
+}
+
+.profile.ng-leave,
+.profile.ng-enter.ng-enter-active {
+    left: 0;
+}
+
+.profile-status {
+    width: 80%;
+    background: #3468b7;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4em;
+    border-radius: 10px;
+    box-shadow: 0 9px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #214274;
+}
+
+.profile-status img {
+    height: 4em;
+    position: relative;
+    top: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5)
+}
+
+.profile-status h4 {
+    text-align: center;
+    position: relative;
+    top: -1em;
+    font-size: 24px;
+    margin-bottom: 0em !important;
+}
+
+.profile-status p {
+    position: relative;
+    text-align: center;
+    top: -1.5em;
+    margin-bottom: 0;
+}
+
+.profile-achievement-btn {
+    box-shadow: 0 4px 0 #85329a, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin-bottom: 0em;
+    background-color: #bf2dbb;
+    border: 1px solid #86449a;
+    position: relative;
+    top: -1em;
+}
+
+.profile-statistics {
+    height: 10em;
+    background-color: #3468b8;
+    padding: 1em;
+    text-align: center;
+    margin-top: 1em;
+    box-shadow: 0 9px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    border: 1px solid #214274;
+}
+
+.profile-back-btn {
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 0 2px 0 #ababab, 0 5px 10px #464646;
+}
+
+.profile-back-btn i {
+    position: relative;
+    left: .3em;
+    top: 1px;
+}
+
+.profile-title {
+    text-shadow: 0 2px 0 #ababab, 0 5px 10px #313131;
+    font-size: 32px;
+}

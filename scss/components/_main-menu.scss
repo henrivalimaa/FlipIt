@@ -1,0 +1,314 @@
+.home-menu {
+	position: absolute;
+	top: 12em;
+}
+
+.menu {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%); 
+	max-width: 20em;
+    text-align: center;
+}
+
+.main-menu .menu {
+	max-width: 20em;
+    text-align: center;
+	background: #4681cd;
+    padding: 0.2em 0.5em 1em 0.5em;
+    position: relative;
+    left: 5.5em !important;
+    top: 0.5em !important;
+    border-top-right-radius: 10px;
+    box-shadow: 0 5px 0 #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #1d566d;
+    border-bottom-right-radius: 10px;
+}
+
+.menu-container {
+	position: relative;
+	/*transition: all 0.5s ease;*/
+}
+
+/*
+.menu-container.ng-enter,
+.menu-container.ng-leave {
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+  	transition: all ease 0.5s;
+}
+.menu-container.ng-enter,
+.menu-container.ng-leave.ng-leave-active {
+  	left: -20em;
+}
+.menu-container.ng-leave,
+.menu-container.ng-enter.ng-enter-active {
+	left: 0;
+}
+*/
+
+.menu-item {
+	margin-top: 0.5em;
+}
+
+.menu-item > a {
+	color: #fff !important;
+	font-size: 50px;
+	display: block;
+	width: 100%;
+    border-radius: 12px;
+    padding-bottom: 0.2em;
+    text-shadow: 0 2px 0 #585858;
+    margin-bottom: 0.3em;
+}
+
+.menu-item p {
+	margin: 0.5em;
+	color: #fff;
+	font-size: 25px;
+}
+
+.menu-item p > a {
+	margin: 0em;
+	color: #fff;
+	font-size: 25px;
+}
+
+.menu-item button {
+	width: 100%;
+	padding: 0.5em;
+}
+
+.menu-item button > img {
+	max-width: 1.5em;
+}
+
+.menu-item > a:hover {
+	text-decoration: none;
+}
+
+.main-menu {
+	position: absolute;
+    z-index: 2000;
+    padding: 1em;
+    max-width: 15em;
+    transition : all 0.5s ease;
+}
+
+.main-menu .menu-item a {
+	font-size: 25px;
+}
+
+.main-menu .menu-item p {
+	margin: 0;
+	font-size: 20px;
+}
+
+.main-menu-btn {
+	width: 20em;
+}
+
+.main-menu-btn button {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+}
+
+.main-menu-btn button:hover {
+	opacity: 0.7;
+}
+
+.main-menu-btn button:focus {
+	outline: none;
+}
+
+.menu-play-btn {
+    background: transparent;
+    border: 3px solid #fff !important;
+    width: 2.5em !important;
+    height: 2.3em;
+    border-radius: 50% !important;
+    margin-bottom: 1em;
+    background-color: #4e9816 !important;
+    box-shadow: 0 9px 0 #264a0b, 
+    inset 0px 1px 0px rgba(255, 255, 255, 0.3), 
+    inset 0 0 3px rgba(255, 255, 255, 0.5),
+    0 10px 10px #fff;
+    border: 1px solid #4e9817 !important;
+    margin-bottom: 1em !important;
+    -webkit-animation-name: glow; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: glow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes glow {
+    50%  {
+    	box-shadow: 0 9px 0 #264a0b, 
+    	inset 0px 1px 0px rgba(255, 255, 255, 0.3), 
+    	inset 0 0 3px rgba(255, 255, 255, 0.5),
+    	0 10px 100px #fff;
+    }
+}
+
+/* Standard syntax */
+@keyframes glow {
+    50%  {
+    	box-shadow: 0 9px 0 #264a0b, 
+    	inset 0px 1px 0px rgba(255, 255, 255, 0.3), 
+    	inset 0 0 3px rgba(255, 255, 255, 0.5),
+    	0 10px 100px #fff;
+    }
+}
+
+.menu-play-icon {
+    position: relative;
+    top: 0.25em;
+    left: 0.1em;
+    font-size: 1.2em !important;
+}
+
+.menu-home-btn {
+	box-shadow: 0 8px 0 #71393a, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+    background-color: #bd5e5e !important;
+    border: 1px solid #70393a !important;
+}
+
+.menu-play-btn-2 {
+	background-color: #66a93c !important;
+    box-shadow: 0 8px 0 #32541d, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+    border: 1px solid #33541e !important;
+}
+
+.menu-leaderboard-btn {
+	background-color: #a52a85 !important;
+	box-shadow: 0 8px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+    border: 1px solid #7b3363 !important;
+}
+
+.menu-store-btn {
+	background-color: #188caf !important;
+	box-shadow: 0 9px 0 #1d586f, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+    border: 1px solid #1d586f !important;
+}
+
+.menu-settings-btn {
+	background-color: #ea8d00 !important;
+	box-shadow: 0 9px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #92591f !important;
+}
+
+.menu-google-plus-btn {
+	border-radius: 12px;
+    width: 4.5em !important;
+    background-color: #c15050;
+    box-shadow: 0 9px 0 #863737, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #863737;
+    color: #fff;
+    text-shadow: 0 2px 0 #777;
+}
+
+.menu-facebook-btn {
+	color: #fff;
+	border-radius: 12px;
+    width: 4.5em !important;
+    text-shadow: 0 2px 0 #777;
+	background-color: #346abb;
+    box-shadow: 0 9px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #214274;
+}
+
+.pulse {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes pulse {
+	0% {
+	    -webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+	    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+	    -webkit-transform: scale3d(1, 1, 1);
+	   	transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes pulse {
+	0% {
+	    -webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+	    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+	    -webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.profile-menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 1em;
+	overflow: hidden;
+	z-index: 1000;
+	width: 20em;
+	text-align: right;
+}
+
+.profile-menu button {
+	padding: 0;
+	width: 3em;
+	height: 3em;
+	margin-bottom: 0.5em;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid #fff;
+}
+
+.profile-menu button:hover {
+	opacity: 0.6;
+}
+
+.profile-menu button:focus {
+	outline: none;
+}
+
+.profile-menu button > img {
+	height: 3em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.player-status > p {
+	display: inline-block;
+	font-size: 20px;
+	color: #fff;
+	margin-right: 0.5em;
+}
+
+.player-info p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	color: #fff;
+	font-size: 20px;
+}

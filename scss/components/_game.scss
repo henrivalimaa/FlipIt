@@ -1,0 +1,97 @@
+#game-area, .app, .full-screen {
+	height: 100%;
+	width: 100%;	
+}
+
+#game-area canvas {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.game-statistics {
+	background-color: transparent;
+	color: #fff;
+	padding: 0;
+    max-width: 20em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.3em;
+    z-index: 1000;
+    font-size: 32px;
+    text-align: center;
+}
+
+.game-restart-btn {
+	background-color: transparent !important;
+	border: none !important; 
+}
+
+.game-result-dialog {
+	position: fixed;
+    top: 50%;
+    color: #fff;
+    z-index: 1000;
+    padding: 1em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #1d566d;
+    background: #2877b5
+}
+
+.result-dialog-leaderboard-btn {
+    background-color: #a52a85 !important;
+    box-shadow: 0 4px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+    border: 1px solid #7b3363 !important;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+.result-dialog-restart-btn {
+	background-color: #ea8d00 !important;
+    box-shadow: 0 4px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #92591f !important;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+/*
+.game-result-dialog h1, h2, h3 {
+	text-shadow: 0 4px #3c3c3c;
+}
+*/
+
+.game-result-dialog h3 {
+	font-size: 20px !important;
+}
+
+.highscore {
+	padding: 0.5em;
+	text-shadow: 0 0 10px #fff;
+    -webkit-animation-name: glow; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: highscore-glow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes highscore-glow {
+    50%  {
+    	text-shadow: 0 4px #3c3c3c, 0 0 50px #fff;
+    }
+}
+
+/* Standard syntax */
+@keyframes highscore-glow {
+    50%  {
+    	text-shadow: 0 4px #3c3c3c, 0 0 50px #fff;
+    }
+}
