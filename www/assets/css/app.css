@@ -194,29 +194,24 @@
   width: 80%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 5px 0 #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 0px #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #1d566d;
   background: #2877b5; }
 
 .result-dialog-leaderboard-btn {
   background-color: #a52a85 !important;
-  box-shadow: 0 4px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 0px #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #7b3363 !important;
   padding: 0.5em 1em;
   border-radius: 10px; }
 
 .result-dialog-restart-btn {
   background-color: #ea8d00 !important;
-  box-shadow: 0 4px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 0px #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #92591f !important;
   padding: 0.5em 1em;
   border-radius: 10px; }
 
-/*
-.game-result-dialog h1, h2, h3 {
-	text-shadow: 0 4px #3c3c3c;
-}
-*/
 .game-result-dialog h3 {
   font-size: 20px !important; }
 
@@ -434,24 +429,6 @@
   position: relative;
   /*transition: all 0.5s ease;*/ }
 
-/*
-.menu-container.ng-enter,
-.menu-container.ng-leave {
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    -ms-transition: all ease 0.5s;
-    -o-transition: all ease 0.5s;
-  	transition: all ease 0.5s;
-}
-.menu-container.ng-enter,
-.menu-container.ng-leave.ng-leave-active {
-  	left: -20em;
-}
-.menu-container.ng-leave,
-.menu-container.ng-enter.ng-enter-active {
-	left: 0;
-}
-*/
 .menu-item {
   margin-top: 0.5em; }
 
@@ -562,24 +539,24 @@
 
 .menu-leaderboard-btn {
   background-color: #a52a85 !important;
-  box-shadow: 0 8px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 0 #7b3363, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
   border: 1px solid #7b3363 !important; }
 
 .menu-store-btn {
   background-color: #188caf !important;
-  box-shadow: 0 9px 0 #1d586f, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 0 #1d586f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
   border: 1px solid #1d586f !important; }
 
 .menu-settings-btn {
   background-color: #ea8d00 !important;
-  box-shadow: 0 9px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 0 #92591f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
   border: 1px solid #92591f !important; }
 
 .menu-google-plus-btn {
   border-radius: 12px;
   width: 4.5em !important;
   background-color: #c15050;
-  box-shadow: 0 9px 0 #863737, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 9px 0 #863737, inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #863737;
   color: #fff;
   text-shadow: 0 2px 0 #777; }
@@ -588,10 +565,10 @@
   color: #fff;
   border-radius: 12px;
   width: 4.5em !important;
-  text-shadow: 0 2px 0 #777;
   background-color: #346abb;
-  box-shadow: 0 9px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
-  border: 1px solid #214274; }
+  box-shadow: 0 9px 0 #214275, inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  border: 1px solid #214274;
+  text-shadow: 0 2px 0 #777; }
 
 .pulse {
   -webkit-animation-name: pulse;
@@ -644,7 +621,7 @@
   border: 2px solid #fff; }
 
 .profile-menu button:hover {
-  opacity: 0.6; }
+  opacity: 0.7; }
 
 .profile-menu button:focus {
   outline: none; }

@@ -1,6 +1,8 @@
+@import "helpers/_mixins.scss";
+
 #game-area, .app, .full-screen {
 	height: 100%;
-	width: 100%;	
+	width: 100%;
 }
 
 #game-area canvas {
@@ -40,14 +42,16 @@
     width: 80%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 5px 0 #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    @include box-shadow(#1d576e);
+    //box-shadow: 0 5px 0 #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
     border: 1px solid #1d566d;
     background: #2877b5
 }
 
 .result-dialog-leaderboard-btn {
     background-color: #a52a85 !important;
-    box-shadow: 0 4px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+    @include box-shadow(#7b3363);
+    //box-shadow: 0 4px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
     border: 1px solid #7b3363 !important;
     padding: 0.5em 1em;
     border-radius: 10px;
@@ -55,17 +59,12 @@
 
 .result-dialog-restart-btn {
 	background-color: #ea8d00 !important;
-    box-shadow: 0 4px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    @include box-shadow(#92591f);
+    //box-shadow: 0 4px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
     border: 1px solid #92591f !important;
     padding: 0.5em 1em;
     border-radius: 10px;
 }
-
-/*
-.game-result-dialog h1, h2, h3 {
-	text-shadow: 0 4px #3c3c3c;
-}
-*/
 
 .game-result-dialog h3 {
 	font-size: 20px !important;
