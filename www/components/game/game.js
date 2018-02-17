@@ -11,6 +11,7 @@ function Game (config) {
 	this.bottleStationary = true;
 
 	//this.bottle;
+
 	var game = new Phaser.Game(
 		CLIENT_WIDTH, 
 		CLIENT_HEIGHT, 
@@ -28,7 +29,7 @@ function Game (config) {
 	this.render = render;
 	this.update = update;
 	this.restartGame = restartGame;*/
-	//setTimeout(function(){ game.input.onUp.add(_touchEnd(), this); }, 2000);
+	//setTimeout(function(){ game.input.onUp.add(_touchEnd, this); }, 2000);
 	console.log(game);
 
 	function preload() {
@@ -49,8 +50,7 @@ function Game (config) {
 		_createObjects();
 		_createBottle();
 		_createCamera();
-		//game.input.onUp.add(function(){console.log('KULLI');});
-
+		
 		function _createPhysics () {
 			console.log(game);
 			console.log(this);
@@ -63,10 +63,8 @@ function Game (config) {
 	    	game.physics.p2.setImpactEvents(true);
 
 	    	// THIS NEEDS TO BE FIXED
-			//setTimeout(function(){ game.input.onUp.add(_touchEnd, this); }, 5000);
-			game.input.onUp.add(_touchEnd, game);
+			setTimeout(function(){ game.input.onUp.add(_touchEnd, this); }, 1000);
 			game.world.setBounds(0, 0, CLIENT_WIDTH * 2, CLIENT_HEIGHT * 2);
-			//game.input.onUp.add(_touchEnd(), game);
 			function _touchEnd() {
 				var lastTouch = game.input.pointer1;
 				console.log(lastTouch);
@@ -88,7 +86,6 @@ function Game (config) {
 					this.calculatingResult = false;
 				}
 			}
-			//game.input.onUp.add(touchEnd(), this);
 		}
 
 

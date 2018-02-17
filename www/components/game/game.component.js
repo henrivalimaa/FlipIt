@@ -27,7 +27,6 @@ function GameController($scope) {
 
 	ctrl.$onInit = function () {
 		ctrl.game = new Game();
-		ctrl.game.create();
 	}
 
 	/**
