@@ -20,16 +20,21 @@ function GameController($scope) {
 	var clientHeight = window.innerHeight;
 
 	ctrl.bottle;
-	ctrl.game = new Phaser.Game(clientWidth = window.innerWidth, clientHeight = window.innerHeight, Phaser.CANVAS, 'game-area', { preload: preload, create: create, update: update, render: render });
+	//ctrl.game = new Phaser.Game(clientWidth = window.innerWidth, clientHeight = window.innerHeight, Phaser.CANVAS, 'game-area', { preload: preload, create: create, update: update, render: render });
 
 	ctrl.restartGame = restartGame;
 	ctrl.showLeaderboard = showLeaderboard;
+
+	ctrl.$onInit = function () {
+		ctrl.game = new Game();
+		ctrl.game.create();
+	}
 
 	/**
 	 * [preload description]
 	 * @return {[type]} [description]
 	 */
-	function preload() {
+	/*function preload() {
 		ctrl.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
 		ctrl.game.load.image('floor', 'assets/images/game/objects/rectangle.png');
 		ctrl.game.load.image('grid', 'assets/images/game/backgrounds/grid.png');
@@ -39,6 +44,7 @@ function GameController($scope) {
 	 * [create description]
 	 * @return {[type]} [description]
 	 */
+
 	function create() {
 		initGame();
 	}
