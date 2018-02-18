@@ -527,47 +527,55 @@
   font-size: 1.2em !important; }
 
 .menu-home-btn {
-  box-shadow: 0 8px 0 #71393a, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
   background-color: #bd5e5e !important;
-  border: 1px solid #70393a !important; }
+  border: 1px solid #71393a !important;
+  box-shadow: 0 8px 0 #71393a, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
 
 .menu-play-btn-2 {
   background-color: #66a93c !important;
-  box-shadow: 0 8px 0 #32541d, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
-  border: 1px solid #33541e !important; }
+  border: 1px solid #32541d !important;
+  box-shadow: 0 8px 0 #32541d, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
 
 .menu-leaderboard-btn {
   background-color: #a52a85 !important;
-  box-shadow: 0 8px 0 #7b3363, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
-  border: 1px solid #7b3363 !important; }
+  border: 1px solid #7b3363 !important;
+  box-shadow: 0 8px 0 #7b3363, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
 
 .menu-store-btn {
   background-color: #188caf !important;
-  box-shadow: 0 8px 0 #1d586f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
-  border: 1px solid #1d586f !important; }
+  border: 1px solid #1d586f !important;
+  box-shadow: 0 8px 0 #1d586f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
 
 .menu-settings-btn {
   background-color: #ea8d00 !important;
-  box-shadow: 0 8px 0 #92591f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
-  border: 1px solid #92591f !important; }
+  border: 1px solid #92591f !important;
+  box-shadow: 0 8px 0 #92591f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
 
 .menu-google-plus-btn {
+  color: #fff;
   border-radius: 12px;
   width: 4.5em !important;
-  background-color: #c15050;
+  background-color: #c15050 !important;
+  border: 1px solid #863737 !important;
+  text-shadow: 0 2px 0 #777;
   box-shadow: 0 9px 0 #863737, inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
-  border: 1px solid #863737;
-  color: #fff;
-  text-shadow: 0 2px 0 #777; }
+  /*border-radius: 12px;
+    width: 4.5em !important;
+    background-color: $google-btn;
+    @include social-icon-box-shadow($google-btn-drop);
+    //box-shadow: 0 9px 0 #863737, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #863737;
+    color: #fff;
+    text-shadow: 0 2px 0 #777;*/ }
 
 .menu-facebook-btn {
   color: #fff;
   border-radius: 12px;
   width: 4.5em !important;
-  background-color: #346abb;
-  box-shadow: 0 9px 0 #214275, inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
-  border: 1px solid #214274;
-  text-shadow: 0 2px 0 #777; }
+  background-color: #346abb !important;
+  border: 1px solid #214275 !important;
+  text-shadow: 0 2px 0 #777;
+  box-shadow: 0 9px 0 #214275, inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5); }
 
 .pulse {
   -webkit-animation-name: pulse;

@@ -3,8 +3,14 @@
 		inset 0 1px 0 rgba(255, 255, 255, 0.3),
 		inset 0 0 3px rgba(255, 255, 255, 0.5);
 	}
-@mixin social-icon-box-shadow ($color) {
-	box-shadow: 0 9px 0 $color,
+@mixin social-icon-btn ($bg-color, $border-color) {
+	color: #fff;
+	border-radius: 12px;
+	width: 4.5em !important;
+	background-color: $bg-color !important;
+	border: 1px solid $border-color !important;
+	text-shadow: 0 2px 0 #777;
+	box-shadow: 0 9px 0 $border-color,
 		inset 0 1px 0 rgba(255, 255, 255, 0.7),
 		inset 0 0 8px rgba(255, 255, 255, 0.5);
 	}
@@ -14,3 +20,15 @@
         inset 0px 1px 0px rgba(255, 255, 255, 0.7),
         inset 0 0 8px rgba(255, 255, 255, 0.5);
     }
+
+@mixin main-menu-btn-border ($color) {
+	border: 1px solid $color !important;
+}
+
+@mixin main-menu-btn ($bg-color, $border-color) {
+	background-color: $bg-color !important;
+	border: 1px solid $border-color !important;
+	box-shadow: 0 8px 0 $border-color,
+	inset 0 1px 0 rgba(255, 255, 255, 0.3),
+	inset 0 0 3px rgba(255, 255, 255, 0.5);
+}

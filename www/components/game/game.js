@@ -10,6 +10,8 @@ function Game (config) {
 	this.calculatingResult = false;
 	this.bottleStationary = true;
 
+
+
 	//this.bottle;
 
 	var game = new Phaser.Game(
@@ -30,26 +32,31 @@ function Game (config) {
 	this.update = update;
 	this.restartGame = restartGame;*/
 	//setTimeout(function(){ game.input.onUp.add(_touchEnd, this); }, 2000);
-	console.log(game);
+	//console.log(game);
 
 	function preload() {
-		this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
+		//this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
+		this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle-scaled.png');
 		this.game.load.image('floor', 'assets/images/game/objects/rectangle.png');
 		this.game.load.image('grid', 'assets/images/game/backgrounds/grid.png');
+
 	}
 
 	function create() {
 		// if (this.bottle !== undefined) this.bottle.destroy();
-		console.log(game);
+
+
 		game.physics.startSystem(Phaser.Physics.P2JS);
+
 		this.floorCollisionGroup;
 		this.bottleCollisionGroup;
 
+		_createCollisionGroups();
 		_createPhysics();
-		_createCollisionGroups();		
 		_createObjects();
 		_createBottle();
 		_createCamera();
+
 		
 		function _createPhysics () {
 			console.log(game);
@@ -67,7 +74,6 @@ function Game (config) {
 			game.world.setBounds(0, 0, CLIENT_WIDTH * 2, CLIENT_HEIGHT * 2);
 			function _touchEnd() {
 				var lastTouch = game.input.pointer1;
-				console.log(lastTouch);
 				_flipBottle(lastTouch);
 			}
 			function _flipBottle(touch) {
@@ -92,6 +98,7 @@ function Game (config) {
 		function _createCollisionGroups() {
 			game.floorCollisionGroup = game.physics.p2.createCollisionGroup();
 		    game.bottleCollisionGroup = game.physics.p2.createCollisionGroup();
+		    game.waterCollisionGroup = game.physics.p2.createCollisionGroup();
 		    game.physics.p2.updateBoundsCollisionGroup();
 		}
 
@@ -104,19 +111,20 @@ function Game (config) {
 		    game.floor.body.static = true;
 
 		    // Collision enabled with bottle
-		    game.floor.body.collides(game.bottleCollisionGroup);
+		    game.floor.body.collides([game.bottleCollisionGroup, game.waterCollisionGroup]);
 		}
 
 
 		function _createBottle() {
-			game.bottle = game.add.sprite(game.world.centerX, game.world.centerY + game.world.height / 2 - 120, 'bottle');
+			game.bottle = game.add.sprite(game.world.centerX, game.world.centerY + game.world.height / 2 - 150, 'bottle');
+			
+			game.physics.p2.enable(game.bottle, true);
 			game.bottle.anchor.setTo(0.5);
-			game.bottle.scale.setTo(0.2);
-			game.physics.p2.enable(game.bottle, false);
 			game.bottle.body.setCollisionGroup(game.bottleCollisionGroup);
 			game.bottle.body.collideWorldBounds = true;
 			game.bottle.body.fixedRotation = false;
-
+			//game.bottle.body.mass = 100;
+			//game.bottle.body.adjustCenterOfMass();
 			game.bottle.body.collides(game.floorCollisionGroup, _bottleLanding, this);
 
 			function _bottleLanding() {
