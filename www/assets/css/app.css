@@ -29,14 +29,14 @@
   position: relative;
   transform: translateX(-50%); }
 
-.level-map {
+.levels {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   list-style: none; }
 
-.level-map > li {
+.levels > li {
   width: 3em;
   height: 3em;
   background: trasparent;
@@ -45,7 +45,7 @@
   border-radius: 10px;
   margin-bottom: 0.5em; }
 
-.level-map > li > p {
+.levels > li > p {
   margin: 0;
   position: relative;
   left: 50%;
@@ -54,21 +54,53 @@
   width: 1em;
   text-align: center; }
 
+.level-map {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
 .level-map.ng-enter,
 .level-map.ng-leave {
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  -ms-transition: all ease 0.5s;
-  -o-transition: all ease 0.5s;
-  transition: all ease 0.5s; }
+  -webkit-transition: all ease-out 0.5s;
+  -moz-transition: all ease-out 0.5s;
+  -ms-transition: all ease-out 0.5s;
+  -o-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5ss; }
 
 .level-map.ng-enter,
 .level-map.ng-leave.ng-leave-active {
-  left: -20em; }
+  left: -100%; }
 
 .level-map.ng-leave,
 .level-map.ng-enter.ng-enter-active {
   left: 0; }
+
+.game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: all 0.5s ease-out; }
+
+.game.ng-enter,
+.game.ng-leave {
+  -webkit-transition: all ease-out 0.5s;
+  -moz-transition: all ease-out 0.5s;
+  -ms-transition: all ease-out 0.5s;
+  -o-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s; }
+
+.game.ng-enter,
+.game.ng-leave.ng-leave-active {
+  left: 200%; }
+
+.game.ng-leave,
+.game.ng-enter.ng-enter-active {
+  left: 0; }
+
+.temp-btn {
+  position: absolute;
+  bottom: 0; }
 
 .store {
   padding: 1em; }
