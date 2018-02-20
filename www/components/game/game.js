@@ -10,10 +10,6 @@ function Game (config) {
 	this.calculatingResult = false;
 	this.bottleStationary = true;
 
-
-
-	//this.bottle;
-
 	var game = new Phaser.Game(
 		CLIENT_WIDTH, 
 		CLIENT_HEIGHT, 
@@ -36,7 +32,7 @@ function Game (config) {
 
 	function preload() {
 		//this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
-		this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle-scaled.png');
+		this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
 		this.game.load.image('floor', 'assets/images/game/objects/rectangle.png');
 		this.game.load.image('grid', 'assets/images/game/backgrounds/grid.png');
 
@@ -120,6 +116,7 @@ function Game (config) {
 			
 			game.physics.p2.enable(game.bottle, true);
 			game.bottle.anchor.setTo(0.5);
+			game.bottle.scale.setTo(0.35);
 			game.bottle.body.setCollisionGroup(game.bottleCollisionGroup);
 			game.bottle.body.collideWorldBounds = true;
 			game.bottle.body.fixedRotation = false;

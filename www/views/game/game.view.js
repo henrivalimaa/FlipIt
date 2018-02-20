@@ -14,7 +14,17 @@ GameViewController.$inject = [];
 function GameViewController() {
 	var ctrl = this;
 
+	ctrl.level;
+
+	ctrl.startGame = startGame;
+
 	ctrl.$onInit = function () {
-		console.log(ctrl.user);
+		ctrl.gameMode = false;
+		ctrl.levels = levels;
+	}
+
+	function startGame(level) {
+		ctrl.gameMode = true;
+		ctrl.level = level;
 	}
 };

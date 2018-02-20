@@ -1,1 +1,8 @@
-<game></game>
+<div class="game-view">
+	<ul class="level-map" ng-if="!$ctrl.gameMode">
+		<li ng-repeat="level in $ctrl.levels" ng-click="$ctrl.startGame(level);">
+			<p>{{$index  + 1}}</p>
+		</li>
+	</ul>
+	<game ng-if="$ctrl.gameMode" level="$ctrl.level"></game>
+</div>
