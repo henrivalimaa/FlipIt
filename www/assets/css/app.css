@@ -270,29 +270,23 @@
   width: 80%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 5px 0 #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 0px #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #1d566d;
   background: #2877b5; }
 
 .result-dialog-leaderboard-btn {
   background-color: #a52a85 !important;
-  box-shadow: 0 4px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px 0px #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #7b3363 !important;
   padding: 0.5em 1em;
   border-radius: 10px; }
 
 .result-dialog-restart-btn {
   background-color: #ea8d00 !important;
-  box-shadow: 0 4px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
-  border: 1px solid #92591f !important;
+  box-shadow: 0px 5px 0px #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   padding: 0.5em 1em;
   border-radius: 10px; }
 
-/*
-.game-result-dialog h1, h2, h3 {
-	text-shadow: 0 4px #3c3c3c;
-}
-*/
 .game-result-dialog h3 {
   font-size: 20px !important; }
 
@@ -510,6 +504,7 @@
   position: relative;
   transition: all 0.5s ease; }
 
+<<<<<<< HEAD
 .menu-container.ng-enter,
 .menu-container.ng-leave {
   -webkit-transition: all ease 0.5s;
@@ -526,6 +521,8 @@
 .menu-container.ng-enter.ng-enter-active {
   left: 0; }
 
+=======
+>>>>>>> 61b062bbbe960c3cf5082dbe7ec19445738311b9
 .menu-item {
   margin-top: 0.5em; }
 
@@ -628,11 +625,16 @@
   font-size: 1.2em !important; }
 
 .menu-home-btn {
+<<<<<<< HEAD
   box-shadow: 0 4px 0 #71393a, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+=======
+>>>>>>> 61b062bbbe960c3cf5082dbe7ec19445738311b9
   background-color: #bd5e5e !important;
-  border: 1px solid #70393a !important; }
+  border: 1px solid #71393a !important;
+  box-shadow: 0 8px 0 #71393a, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
 
 .menu-play-btn-2 {
+<<<<<<< HEAD
   background-color: #4e9816 !important;
   box-shadow: 0 4px 0 #32541d, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
   border: 1px solid #33541e !important; }
@@ -651,24 +653,66 @@
   background-color: #ea8d00 !important;
   box-shadow: 0 4px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #92591f !important; }
+=======
+  background-color: #66a93c !important;
+  border: 1px solid #32541d !important;
+  box-shadow: 0 8px 0 #32541d, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
+
+.menu-leaderboard-btn {
+  background-color: #a52a85 !important;
+  border: 1px solid #7b3363 !important;
+  box-shadow: 0 8px 0 #7b3363, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
+
+.menu-store-btn {
+  background-color: #188caf !important;
+  border: 1px solid #1d586f !important;
+  box-shadow: 0 8px 0 #1d586f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
+
+.menu-settings-btn {
+  background-color: #ea8d00 !important;
+  border: 1px solid #92591f !important;
+  box-shadow: 0 8px 0 #92591f, inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5); }
+>>>>>>> 61b062bbbe960c3cf5082dbe7ec19445738311b9
 
 .menu-google-plus-btn {
+  color: #fff;
   border-radius: 12px;
   width: 4.5em !important;
+<<<<<<< HEAD
   background-color: #c15050;
   box-shadow: 0 4px 0 #863737, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #863737;
   color: #fff;
   text-shadow: 0 2px 0 #777; }
+=======
+  background-color: #c15050 !important;
+  border: 1px solid #863737 !important;
+  text-shadow: 0 2px 0 #777;
+  box-shadow: 0 9px 0 #863737, inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+  /*border-radius: 12px;
+    width: 4.5em !important;
+    background-color: $google-btn;
+    @include social-icon-box-shadow($google-btn-drop);
+    //box-shadow: 0 9px 0 #863737, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #863737;
+    color: #fff;
+    text-shadow: 0 2px 0 #777;*/ }
+>>>>>>> 61b062bbbe960c3cf5082dbe7ec19445738311b9
 
 .menu-facebook-btn {
   color: #fff;
   border-radius: 12px;
   width: 4.5em !important;
+  background-color: #346abb !important;
+  border: 1px solid #214275 !important;
   text-shadow: 0 2px 0 #777;
+<<<<<<< HEAD
   background-color: #346abb;
   box-shadow: 0 4px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
   border: 1px solid #214274; }
+=======
+  box-shadow: 0 9px 0 #214275, inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5); }
+>>>>>>> 61b062bbbe960c3cf5082dbe7ec19445738311b9
 
 .pulse {
   -webkit-animation-name: pulse;
@@ -721,7 +765,7 @@
   border: 2px solid #fff; }
 
 .profile-menu button:hover {
-  opacity: 0.6; }
+  opacity: 0.7; }
 
 .profile-menu button:focus {
   outline: none; }
