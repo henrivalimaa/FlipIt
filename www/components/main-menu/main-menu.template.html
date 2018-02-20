@@ -1,11 +1,12 @@
-<div ng-class="$ctrl.state === 'home' ? 'container-fluid home-menu' : 'main-menu'">
-	<div class="main-menu-btn" ng-if="$ctrl.state !== 'home'">
-		<button ng-click="$ctrl.menuOpen = !$ctrl.menuOpen">
-			<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
-		</button>
-	</div>
-	<div ng-if="$ctrl.menuOpen" class="menu-container">
+<div ng-if="$ctrl.state === 'home'" class="container-fluid home-menu">
+	<div class="menu-container">
 		<ul class="menu">
+			<li class="menu-item" ng-if="$ctrl.state === 'home'">
+				<a ui-sref="game" class="btn-lg btn-success menu-play-btn centered-X">
+					<i class="fa fa-2x fa-play menu-play-icon"></i>
+				</a>
+			</li>
+			<!--
 			<li class="menu-item">
 				<a ui-sref="home" class="btn-lg btn-success menu-home-btn" ng-if="$ctrl.state !== 'home'">Home</a>
 			</li>
@@ -15,6 +16,57 @@
 				</a>
 			</li>
 			<li class="menu-item" ng-if="$ctrl.state !== 'home' && $ctrl.state !== 'game'">
+				<a ui-sref="game" class="btn-lg btn-danger menu-play-btn-2">Play</a>
+			</li>
+			<li class="menu-item" ng-if="$ctrl.state !== 'leaderboards'">
+				<a class="btn-lg btn-danger menu-leaderboard-btn" ng-click="$ctrl.showLeaderboard();">Leaderboard</a>
+			</li>
+			<li class="menu-item" ng-if="$ctrl.state !== 'store'">
+				<a ui-sref="store" class="btn-lg btn-info menu-store-btn">Store</a>
+			</li>
+			<li class="menu-item" ng-if="$ctrl.state !== 'settings'">
+				<a ui-sref="settings" class="btn-lg btn-warning menu-settings-btn">Settings</a>
+			</li>
+			-->
+			<li class="menu-item">
+				<div ng-if="!$ctrl.userAuthenticated">
+					<p>Sign In with:</p>
+					<Button class="btn-lg btn-default menu-google-plus-btn" ng-click="$ctrl.signInWithGoogle()">
+						<i class="fa fa-google-plus"></i>
+					</Button>
+					<Button class="btn-lg btn-default menu-facebook-btn" ng-click="$ctrl.signInWithGoogle()">
+						<i class="fa fa-facebook-square"></i>
+					</Button>
+				</div>
+				<div ng-if="$ctrl.userAuthenticated">
+					<p>You are signed in as:</p>
+					<p ng-if="$ctrl.userAuthenticated">
+						<a ui-sref="profile">{{ $ctrl.player.displayName }}</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="main-menu">
+	<div class="main-menu-btn">
+		<button ng-click="$ctrl.menuOpen = !$ctrl.menuOpen">
+			<i class="fa fa-2x fa-bars" aria-hidden="true"></i>
+		</button>
+	</div>
+	<div ng-if="$ctrl.menuOpen" class="menu-container">
+		<ul class="menu">
+			<li class="menu-item">
+				<a ui-sref="home" class="btn-lg btn-success menu-home-btn" ng-if="$ctrl.state !== 'home'">Home</a>
+			</li>
+			<!---
+			<li class="menu-item" ng-if="$ctrl.state === 'home'">
+				<a ui-sref="game" class="btn-lg btn-success menu-play-btn centered-X">
+					<i class="fa fa-2x fa-play menu-play-icon"></i>
+				</a>
+			</li>
+			-->
+			<li class="menu-item" ng-if="$ctrl.state !== 'game'">
 				<a ui-sref="game" class="btn-lg btn-danger menu-play-btn-2">Play</a>
 			</li>
 			<li class="menu-item" ng-if="$ctrl.state !== 'leaderboards'">

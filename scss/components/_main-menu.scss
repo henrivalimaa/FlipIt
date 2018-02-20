@@ -18,7 +18,7 @@
     padding: 0.2em 0.5em 1em 0.5em;
     position: relative;
     left: 5.5em !important;
-    top: 0.5em !important;
+    top: 1em !important;
     border-top-right-radius: 10px;
     box-shadow: 0 5px 0 #1d576e, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
     border: 1px solid #1d566d;
@@ -27,10 +27,9 @@
 
 .menu-container {
 	position: relative;
-	/*transition: all 0.5s ease;*/
+	transition: all 0.5s ease;
 }
 
-/*
 .menu-container.ng-enter,
 .menu-container.ng-leave {
     -webkit-transition: all ease 0.5s;
@@ -47,7 +46,6 @@
 .menu-container.ng-enter.ng-enter-active {
 	left: 0;
 }
-*/
 
 .menu-item {
 	margin-top: 0.5em;
@@ -112,8 +110,11 @@
 
 .main-menu-btn button {
 	background-color: transparent;
-	border: none;
-	color: #fff;
+    color: #fff;
+    border: 1px solid #214274;
+    box-shadow: 0 4px 0 #214275, inset 0 1px 0 rgba(255,255,255,.7), inset 0 0 8px rgba(255,255,255,.5);
+    padding: 0.5em 0.7em;
+    border-radius: 5px;
 }
 
 .main-menu-btn button:hover {
@@ -174,32 +175,32 @@
 }
 
 .menu-home-btn {
-	box-shadow: 0 8px 0 #71393a, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 4px 0 #71393a, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
     background-color: #bd5e5e !important;
     border: 1px solid #70393a !important;
 }
 
 .menu-play-btn-2 {
-	background-color: #66a93c !important;
-    box-shadow: 0 8px 0 #32541d, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+	background-color: #4e9816!important;
+    box-shadow: 0 4px 0 #32541d, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
     border: 1px solid #33541e !important;
 }
 
 .menu-leaderboard-btn {
 	background-color: #a52a85 !important;
-	box-shadow: 0 8px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 4px 0 #7b3363, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
     border: 1px solid #7b3363 !important;
 }
 
 .menu-store-btn {
 	background-color: #188caf !important;
-	box-shadow: 0 9px 0 #1d586f, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 4px 0 #1d586f, inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
     border: 1px solid #1d586f !important;
 }
 
 .menu-settings-btn {
 	background-color: #ea8d00 !important;
-	box-shadow: 0 9px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 4px 0 #92591f, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
     border: 1px solid #92591f !important;
 }
 
@@ -207,7 +208,7 @@
 	border-radius: 12px;
     width: 4.5em !important;
     background-color: #c15050;
-    box-shadow: 0 9px 0 #863737, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 0 #863737, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
     border: 1px solid #863737;
     color: #fff;
     text-shadow: 0 2px 0 #777;
@@ -219,7 +220,7 @@
     width: 4.5em !important;
     text-shadow: 0 2px 0 #777;
 	background-color: #346abb;
-    box-shadow: 0 9px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
     border: 1px solid #214274;
 }
 

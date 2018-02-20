@@ -37,13 +37,13 @@
 
 .profile-status {
     width: 80%;
-    background: #3468b7;
+    background: #4481cc;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 4em;
     border-radius: 10px;
-    box-shadow: 0 9px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 0 #214275, inset 0px 1px 0px rgba(255, 255, 255, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.5);
     border: 1px solid #214274;
 }
 
@@ -107,7 +107,7 @@
 
 .profile-back-btn i {
     position: relative;
-    left: .3em;
+    left: -2px;
     top: 1px;
 }
 

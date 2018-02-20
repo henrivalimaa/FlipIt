@@ -28,8 +28,6 @@ function MainMenuController($scope, $state, $rootScope) {
 	$scope.$watch(function () {
     	return $state.$current.name;
 	}, function(state, fromState){
-		if (state === 'home') ctrl.menuOpen = true;
-		else ctrl.menuOpen = false;
 		ctrl.state = state;
 	})
 

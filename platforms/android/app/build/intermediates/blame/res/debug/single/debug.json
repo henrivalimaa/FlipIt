@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/opt/projects/games/FlipIt/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
-        "source": "/home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
-    },
-    {
         "merged": "/opt/projects/games/FlipIt/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_plusone_small_off_client.png.flat",
         "source": "/home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-plus-11.8.0.aar/9d034bb796056525ff100a1ca4b58480/res/drawable-xxhdpi-v4/ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/opt/projects/games/FlipIt/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
+        "source": "/home/henrivalimaa/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/cd34b8f2d3eb5d90fc4a0574f2aa2aae/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "/opt/projects/games/FlipIt/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_plusone_small_off_client.png.flat",

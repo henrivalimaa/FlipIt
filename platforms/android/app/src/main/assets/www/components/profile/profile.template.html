@@ -7,13 +7,15 @@
 	</div>
 </div>
 <div ng-if="$ctrl.openProfile" class="profile">
-	<div class="profile-back-btn">
-		<i class="fa fa-2x fa-angle-left" ng-click="$ctrl.openProfile = false"></i>
-	</div>
+	<button class="profile-back-btn" ng-click="$ctrl.openProfile = false">
+		<i class="fa fa-2x fa-angle-left"></i>
+	</button>
 	<h2 class="text-center profile-title">My Profile</h2>
 	<div class="profile-status">
-		<img ng-src="{{$ctrl.user.iconImageUrl}}">
+		<img ng-if="$ctrl.user !== undefined" ng-src="{{$ctrl.user.iconImageUrl}}">
+		<img ng-if="$ctrl.user === undefined" ng-src="/assets/images/placeholders/player-placeholder.png">
 		<h4>{{ $ctrl.user.displayName }}</h4>
+		<h4 ng-if="$ctrl.user === undefined">Guest</h4>
 		<p>{{ $ctrl.user.title }}</p>
 		<button class="profile-achievement-btn centered-X" ng-click="$ctrl.showAchievements();">Show achievements</button>
 	</div>
