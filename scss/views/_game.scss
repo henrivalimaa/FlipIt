@@ -36,21 +36,118 @@
 	height: 100%;
 }
 
-.level-map.ng-enter,
-.level-map.ng-leave {
-    -webkit-transition: all ease-out 0.5s;
-    -moz-transition: all ease-out 0.5s;
-    -ms-transition: all ease-out 0.5s;
-    -o-transition: all ease-out 0.5s;
-  	transition: all ease-out 0.5ss;
+.level-map.ng-hide-remove {
+	-webkit-animation-name: bounceInLeft;
+  	animation-name: bounceInLeft;
+  	-webkit-animation-duration: 1s;
+  	animation-duration: 1s;
+  	-webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
 }
-.level-map.ng-enter,
-.level-map.ng-leave.ng-leave-active {
-  	left: -100%;
+
+@-webkit-keyframes bounceInLeft {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-3000px, 0, 0);
+		transform: translate3d(-3000px, 0, 0);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(25px, 0, 0);
+		transform: translate3d(25px, 0, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(-10px, 0, 0);
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(5px, 0, 0);
+		transform: translate3d(5px, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
 }
-.level-map.ng-leave,
-.level-map.ng-enter.ng-enter-active {
-	left: 0;
+
+@keyframes bounceInLeft {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-3000px, 0, 0);
+		transform: translate3d(-3000px, 0, 0);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(25px, 0, 0);
+		transform: translate3d(25px, 0, 0);
+	}
+
+	75% {
+	-webkit-transform: translate3d(-10px, 0, 0);
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	90% {
+	-webkit-transform: translate3d(5px, 0, 0);
+	transform: translate3d(5px, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.level-map.ng-hide-add {
+	-webkit-animation-name: bounceOutLeft;
+ 	animation-name: bounceOutLeft;
+    -webkit-animation-duration: 1s;
+  	animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceOutLeft {
+	20% {
+		opacity: 1;
+	    -webkit-transform: translate3d(20px, 0, 0);
+		transform: translate3d(20px, 0, 0);
+	}
+
+	100% {
+		opacity: 0;
+	    -webkit-transform: translate3d(-2000px, 0, 0);
+		transform: translate3d(-2000px, 0, 0);
+	}
+}
+
+@keyframes bounceOutLeft {
+	20% {
+		opacity: 1;
+	    -webkit-transform: translate3d(20px, 0, 0);
+	    transform: translate3d(20px, 0, 0);
+	}
+
+	100% {
+	    opacity: 0;
+	    -webkit-transform: translate3d(-2000px, 0, 0);
+		transform: translate3d(-2000px, 0, 0);
+	}
 }
 
 .game {
@@ -61,24 +158,98 @@
 	transition: all 0.5s ease-out;
 }
 
-.game.ng-enter,
-.game.ng-leave {
-    -webkit-transition: all ease-out 0.5s;
-    -moz-transition: all ease-out 0.5s;
-    -ms-transition: all ease-out 0.5s;
-    -o-transition: all ease-out 0.5s;
-  	transition: all ease-out 0.5s;
+.game.ng-hide-remove { 
+  	-webkit-animation-name: bounceInRight;
+  	animation-name: bounceInRight;
+    -webkit-animation-duration: 1s;
+  	animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
 }
-.game.ng-enter,
-.game.ng-leave.ng-leave-active {
-  	left: 200%;
+
+@keyframes bounceInRight {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(3000px, 0, 0);
+		transform: translate3d(3000px, 0, 0);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(-25px, 0, 0);
+		transform: translate3d(-25px, 0, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(10px, 0, 0);
+		transform: translate3d(10px, 0, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(-5px, 0, 0);
+		transform: translate3d(-5px, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
 }
-.game.ng-leave,
-.game.ng-enter.ng-enter-active {
-	left: 0;
+
+.game.ng-hide-add { 
+	webkit-animation-name: bounceOutRight;
+  	animation-name: bounceOutRight;
+  	-webkit-animation-duration: 1s;
+  	animation-duration: 1s;
+  	-webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounceOutRight {
+	20% {
+		opacity: 1;
+		-webkit-transform: translate3d(-20px, 0, 0);
+		transform: translate3d(-20px, 0, 0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(2000px, 0, 0);
+		transform: translate3d(2000px, 0, 0);
+	}
+}
+
+@keyframes bounceOutRight {
+	20% {
+		opacity: 1;
+		-webkit-transform: translate3d(-20px, 0, 0);
+		transform: translate3d(-20px, 0, 0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(2000px, 0, 0);
+		transform: translate3d(2000px, 0, 0);
+	}
 }
 
 .temp-btn {
 	position: absolute;
 	bottom: 0;
 }
+
+.game-menu {
+	position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 4em;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+ 

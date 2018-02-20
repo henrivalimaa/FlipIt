@@ -1,12 +1,12 @@
 <div class="game-view">
-	<div ng-if="!$ctrl.gameMode" class="level-map">
+	<div class="level-map" ng-show="!$ctrl.gameMode">
 		<ul class="levels">
 			<li ng-repeat="level in $ctrl.levels" ng-click="$ctrl.startGame(level);">
 				<p>{{$index  + 1}}</p>
 			</li>
 		</ul>
 	</div>
-	<div ng-if="$ctrl.gameMode" class="game">
+	<div class="game" ng-show="$ctrl.gameMode">
 		<game level="$ctrl.level"></game>
 	</div>
 	<button class="temp-btn" ng-click="$ctrl.gameMode = !$ctrl.gameMode">Show/hide</button>

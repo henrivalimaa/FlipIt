@@ -26,7 +26,7 @@ function GameController($scope) {
     		return ctrl.level;
 		}, 
 		function (level) {
-			if (ctrl.game !== undefined) ctrl.game.destroy();
+			// if (ctrl.game !== undefined) ctrl.game.destroy();
 			ctrl.game = new Game(level);
 		}
 	);
@@ -42,6 +42,8 @@ function GameController($scope) {
 			if (ctrl.game.isPaused) {
 				
 			}
+
+			ctrl.score = game.score;
 		}
 	);
 

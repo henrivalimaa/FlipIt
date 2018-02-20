@@ -43,7 +43,6 @@ function Game (config) {
 		game.paused = false;
 		game.physics.startSystem(Phaser.Physics.P2JS);
 		//game.physics.p2.paused = true;
-		console.log(game.physics);
 		this.floorCollisionGroup;
 		this.bottleCollisionGroup;
 
@@ -54,8 +53,6 @@ function Game (config) {
 		_createCamera();
 		
 		function _createPhysics () {
-			console.log(game);
-			console.log(this);
 			//game.physics.startSystem(Phaser.Physics.P2JS);
 			game.add.tileSprite(0, 0, 1920, 1920, 'grid');
 			game.stage.backgroundColor = '#336590';
