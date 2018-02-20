@@ -28,11 +28,11 @@ function Game (config) {
 	this.update = update;
 	this.restartGame = restartGame;*/
 	//setTimeout(function(){ game.input.onUp.add(_touchEnd, this); }, 2000);
-	//console.log(game);
+
 
 	function preload() {
 		//this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
-		this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle.png');
+		this.game.load.image('bottle', 'assets/images/game/bottles/default-bottle-scaled.png');
 		this.game.load.image('floor', 'assets/images/game/objects/rectangle.png');
 		this.game.load.image('grid', 'assets/images/game/backgrounds/grid.png');
 
@@ -40,10 +40,10 @@ function Game (config) {
 
 	function create() {
 		// if (this.bottle !== undefined) this.bottle.destroy();
-
-
+		game.paused = false;
 		game.physics.startSystem(Phaser.Physics.P2JS);
-
+		//game.physics.p2.paused = true;
+		console.log(game.physics);
 		this.floorCollisionGroup;
 		this.bottleCollisionGroup;
 
@@ -52,12 +52,11 @@ function Game (config) {
 		_createObjects();
 		_createBottle();
 		_createCamera();
-
 		
 		function _createPhysics () {
 			console.log(game);
 			console.log(this);
-			game.physics.startSystem(Phaser.Physics.P2JS);
+			//game.physics.startSystem(Phaser.Physics.P2JS);
 			game.add.tileSprite(0, 0, 1920, 1920, 'grid');
 			game.stage.backgroundColor = '#336590';
 
@@ -114,14 +113,14 @@ function Game (config) {
 		function _createBottle() {
 			game.bottle = game.add.sprite(game.world.centerX, game.world.centerY + game.world.height / 2 - 150, 'bottle');
 			
+			//game.bottle.scale.setTo(0.2);
 			game.physics.p2.enable(game.bottle, true);
 			game.bottle.anchor.setTo(0.5);
-			game.bottle.scale.setTo(0.35);
+			
 			game.bottle.body.setCollisionGroup(game.bottleCollisionGroup);
 			game.bottle.body.collideWorldBounds = true;
 			game.bottle.body.fixedRotation = false;
 			//game.bottle.body.mass = 100;
-			//game.bottle.body.adjustCenterOfMass();
 			game.bottle.body.collides(game.floorCollisionGroup, _bottleLanding, this);
 
 			function _bottleLanding() {
@@ -157,7 +156,16 @@ function Game (config) {
 		game.debug.cameraInfo(this.game.camera, 32, 32);
 	}
 
+	function startGame() {
+		game.physics.p2.paused = false;
+	}
+
 	function restartGame() {
 		// TODO
 	}
+
+	function stopGame() {
+		game.paused = true;
+	}
+
 }
