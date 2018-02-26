@@ -7,7 +7,7 @@
 		<h1 class="text-center">Game result</h1>
 		<div ng-if="!$ctrl.loadingResult">
 			<div ng-if="$ctrl.leaderboardResult.newBest">
-				<h2 class="text-center highscore">New highscore: {{$ctrl.score}}</h2>	
+				<h2 class="text-center highscore">New highscore: {{$ctrl.score}}</h2>
 			</div>
 			<div ng-if="!$ctrl.leaderboardResult.newBest">
 			 	<h2 class="text-center">Score: {{$ctrl.score}}</h2>
@@ -24,6 +24,6 @@
 	</div>
 </div>
 <div class="game-menu">
-	<p>Score:</p>
-	<button>Menu</button>
+	<p>Score: {{$ctrl.game.score}}</p>
+	<button ng-click="$ctrl.showScore();">Menu</button>
 </div>
